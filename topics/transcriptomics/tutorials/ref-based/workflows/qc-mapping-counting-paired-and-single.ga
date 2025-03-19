@@ -198,7 +198,7 @@
                 }
             },
             "inputs": [],
-            "label": "Flatten paired collection for FastQC",
+            "label": "Flatten paired collection for Falco",
             "name": "Flatten collection",
             "outputs": [
                 {
@@ -462,7 +462,7 @@
                 }
             },
             "inputs": [],
-            "label": "Merge fastqs for FastQC",
+            "label": "Merge fastqs for Falco",
             "name": "Merge collections",
             "outputs": [
                 {
@@ -654,7 +654,7 @@
         },
         "13": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.74+galaxy0",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/falco/falco/1.2.4+galaxy0",
             "errors": null,
             "id": 13,
             "input_connections": {
@@ -665,20 +665,24 @@
             },
             "inputs": [
                 {
-                    "description": "runtime parameter for tool FastQC",
+                    "description": "runtime parameter for tool Falco",
                     "name": "adapters"
                 },
                 {
-                    "description": "runtime parameter for tool FastQC",
+                    "description": "runtime parameter for tool Falco",
                     "name": "contaminants"
                 },
                 {
-                    "description": "runtime parameter for tool FastQC",
+                    "description": "runtime parameter for tool Falco",
+                    "name": "input_file"
+                },
+                {
+                    "description": "runtime parameter for tool Falco",
                     "name": "limits"
                 }
             ],
-            "label": "FastQC check read qualities",
-            "name": "FastQC",
+            "label": null,
+            "name": "Falco",
             "outputs": [
                 {
                     "name": "html_file",
@@ -694,23 +698,23 @@
                 "top": 22.004389077281218
             },
             "post_job_actions": {},
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.74+galaxy0",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/falco/falco/1.2.4+galaxy0",
             "tool_shed_repository": {
-                "changeset_revision": "5ec9f6bceaee",
-                "name": "fastqc",
-                "owner": "devteam",
+                "changeset_revision": "959a14c1f2dd",
+                "name": "falco",
+                "owner": "iuc",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"adapters\": {\"__class__\": \"RuntimeValue\"}, \"contaminants\": {\"__class__\": \"RuntimeValue\"}, \"input_file\": {\"__class__\": \"ConnectedValue\"}, \"kmers\": \"7\", \"limits\": {\"__class__\": \"RuntimeValue\"}, \"min_length\": null, \"nogroup\": false, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.74+galaxy0",
+            "tool_state": "{\"adapters\": {\"__class__\": \"RuntimeValue\"}, \"bisulfite\": false, \"contaminants\": {\"__class__\": \"RuntimeValue\"}, \"generate_summary\": false, \"input_file\": {\"__class__\": \"RuntimeValue\"}, \"limits\": {\"__class__\": \"RuntimeValue\"}, \"nogroup\": false, \"reverse_complement\": false, \"subsample\": \"1\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.2.4+galaxy0",
             "type": "tool",
-            "uuid": "d3d20a39-d6ec-4096-8739-a87e4e76c562",
+            "uuid": "eb58fa04-c8c7-4ec8-9b19-bdc218fc87e1",
             "when": null,
             "workflow_outputs": []
         },
         "14": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0",
             "errors": null,
             "id": 14,
             "input_connections": {
@@ -724,12 +728,12 @@
             "name": "MultiQC",
             "outputs": [
                 {
-                    "name": "stats",
-                    "type": "input"
-                },
-                {
                     "name": "html_report",
                     "type": "html"
+                },
+                {
+                    "name": "stats",
+                    "type": "tabular"
                 }
             ],
             "position": {
@@ -737,15 +741,15 @@
                 "top": 335.1950477431406
             },
             "post_job_actions": {},
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0",
             "tool_shed_repository": {
-                "changeset_revision": "abfd8a6544d7",
+                "changeset_revision": "f7e2f1eb3a16",
                 "name": "multiqc",
                 "owner": "iuc",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"comment\": \"\", \"export\": false, \"flat\": false, \"results\": [{\"__index__\": 0, \"software_cond\": {\"software\": \"cutadapt\", \"__current_case__\": 5, \"input\": {\"__class__\": \"ConnectedValue\"}}}], \"saveLog\": false, \"title\": \"\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "1.11+galaxy1",
+            "tool_state": "{\"comment\": \"\", \"export\": false, \"flat\": false, \"results\": [{\"__index__\": 0, \"software_cond\": {\"software\": \"cutadapt\", \"__current_case__\": 5, \"input\": {\"__class__\": \"RuntimeValue\"}}}], \"title\": \"\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.24.1+galaxy0",
             "type": "tool",
             "uuid": "b568062f-9d32-4927-9d75-c1c596fb7919",
             "when": null,
@@ -1012,7 +1016,7 @@
         },
         "21": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0",
             "errors": null,
             "id": 21,
             "input_connections": {
@@ -1026,12 +1030,12 @@
             "name": "MultiQC",
             "outputs": [
                 {
-                    "name": "stats",
-                    "type": "input"
-                },
-                {
                     "name": "html_report",
                     "type": "html"
+                },
+                {
+                    "name": "stats",
+                    "type": "tabular"
                 }
             ],
             "position": {
@@ -1039,29 +1043,29 @@
                 "top": 0
             },
             "post_job_actions": {},
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0",
             "tool_shed_repository": {
-                "changeset_revision": "abfd8a6544d7",
+                "changeset_revision": "f7e2f1eb3a16",
                 "name": "multiqc",
                 "owner": "iuc",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"comment\": \"\", \"export\": false, \"flat\": false, \"results\": [{\"__index__\": 0, \"software_cond\": {\"software\": \"fastqc\", \"__current_case__\": 8, \"output\": [{\"__index__\": 0, \"type\": \"data\", \"input\": {\"__class__\": \"ConnectedValue\"}}]}}], \"saveLog\": false, \"title\": \"\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "1.11+galaxy1",
+            "tool_state": "{\"comment\": \"\", \"export\": false, \"flat\": false, \"results\": [{\"__index__\": 0, \"software_cond\": {\"software\": \"fastqc\", \"__current_case__\": 8, \"output\": [{\"__index__\": 0, \"type\": \"data\", \"input\": {\"__class__\": \"RuntimeValue\"}}]}}], \"title\": \"\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.24.1+galaxy0",
             "type": "tool",
             "uuid": "b2c8f079-b9f4-4635-baee-3f3c8da65200",
             "when": null,
             "workflow_outputs": [
                 {
-                    "label": "multiqc_fastqc_html",
+                    "label": "multiqc_falco_html",
                     "output_name": "html_report",
-                    "uuid": "8d0ce9ee-e4e4-4c0c-8261-420ce756ecfd"
+                    "uuid": "791893e6-6e65-49fe-b71f-4a7b6482e0ce"
                 }
             ]
         },
         "22": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0",
             "errors": null,
             "id": 22,
             "input_connections": {
@@ -1088,15 +1092,15 @@
                 "top": 591.1549836409303
             },
             "post_job_actions": {},
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0",
             "tool_shed_repository": {
-                "changeset_revision": "abfd8a6544d7",
+                "changeset_revision": "f7e2f1eb3a16",
                 "name": "multiqc",
                 "owner": "iuc",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "tool_state": "{\"comment\": \"\", \"export\": false, \"flat\": false, \"results\": [{\"__index__\": 0, \"software_cond\": {\"software\": \"star\", \"__current_case__\": 28, \"output\": [{\"__index__\": 0, \"type\": {\"type\": \"log\", \"__current_case__\": 0, \"input\": {\"__class__\": \"ConnectedValue\"}}}]}}], \"saveLog\": false, \"title\": \"\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "1.11+galaxy1",
+            "tool_version": "1.24.1+galaxy0",
             "type": "tool",
             "uuid": "ae6ddb31-1a1e-4fe0-a7bf-d21661540880",
             "when": null,
@@ -1149,7 +1153,7 @@
         },
         "24": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0",
             "errors": null,
             "id": 24,
             "input_connections": {
@@ -1163,12 +1167,12 @@
             "name": "MultiQC",
             "outputs": [
                 {
-                    "name": "stats",
-                    "type": "input"
-                },
-                {
                     "name": "html_report",
                     "type": "html"
+                },
+                {
+                    "name": "stats",
+                    "type": "tabular"
                 }
             ],
             "position": {
@@ -1176,15 +1180,15 @@
                 "top": 1623.37799141434
             },
             "post_job_actions": {},
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0",
             "tool_shed_repository": {
-                "changeset_revision": "abfd8a6544d7",
+                "changeset_revision": "f7e2f1eb3a16",
                 "name": "multiqc",
                 "owner": "iuc",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"comment\": \"\", \"export\": false, \"flat\": false, \"results\": [{\"__index__\": 0, \"software_cond\": {\"software\": \"star\", \"__current_case__\": 28, \"output\": [{\"__index__\": 0, \"type\": {\"type\": \"genecounts\", \"__current_case__\": 1, \"input\": {\"__class__\": \"ConnectedValue\"}}}]}}], \"saveLog\": false, \"title\": \"\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "1.11+galaxy1",
+            "tool_state": "{\"comment\": \"\", \"export\": false, \"flat\": false, \"results\": [{\"__index__\": 0, \"software_cond\": {\"software\": \"star\", \"__current_case__\": 28, \"output\": [{\"__index__\": 0, \"type\": {\"type\": \"genecounts\", \"__current_case__\": 1, \"input\": {\"__class__\": \"RuntimeValue\"}}}]}}], \"title\": \"\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.24.1+galaxy0",
             "type": "tool",
             "uuid": "50335890-a040-4b20-b5de-78a8de7da01e",
             "when": null,
@@ -1691,7 +1695,7 @@
         },
         "36": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0",
             "errors": null,
             "id": 36,
             "input_connections": {
@@ -1705,12 +1709,12 @@
             "name": "MultiQC",
             "outputs": [
                 {
-                    "name": "stats",
-                    "type": "input"
-                },
-                {
                     "name": "html_report",
                     "type": "html"
+                },
+                {
+                    "name": "stats",
+                    "type": "tabular"
                 }
             ],
             "position": {
@@ -1718,15 +1722,15 @@
                 "top": 1399.7582471086855
             },
             "post_job_actions": {},
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0",
             "tool_shed_repository": {
-                "changeset_revision": "abfd8a6544d7",
+                "changeset_revision": "f7e2f1eb3a16",
                 "name": "multiqc",
                 "owner": "iuc",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"comment\": \"\", \"export\": false, \"flat\": false, \"results\": [{\"__index__\": 0, \"software_cond\": {\"software\": \"featureCounts\", \"__current_case__\": 9, \"input\": {\"__class__\": \"ConnectedValue\"}}}], \"saveLog\": false, \"title\": \"\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "1.11+galaxy1",
+            "tool_state": "{\"comment\": \"\", \"export\": false, \"flat\": false, \"results\": [{\"__index__\": 0, \"software_cond\": {\"software\": \"featureCounts\", \"__current_case__\": 9, \"input\": {\"__class__\": \"RuntimeValue\"}}}], \"title\": \"\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.24.1+galaxy0",
             "type": "tool",
             "uuid": "8a57989b-f25e-4373-853e-cce099a46ff6",
             "when": null,
@@ -1740,7 +1744,7 @@
         },
         "37": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0",
             "errors": null,
             "id": 37,
             "input_connections": {
@@ -1754,12 +1758,12 @@
             "name": "MultiQC",
             "outputs": [
                 {
-                    "name": "stats",
-                    "type": "input"
-                },
-                {
                     "name": "html_report",
                     "type": "html"
+                },
+                {
+                    "name": "stats",
+                    "type": "tabular"
                 }
             ],
             "position": {
@@ -1767,15 +1771,15 @@
                 "top": 2633.375151293929
             },
             "post_job_actions": {},
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0",
             "tool_shed_repository": {
-                "changeset_revision": "abfd8a6544d7",
+                "changeset_revision": "f7e2f1eb3a16",
                 "name": "multiqc",
                 "owner": "iuc",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"comment\": \"\", \"export\": false, \"flat\": false, \"results\": [{\"__index__\": 0, \"software_cond\": {\"software\": \"rseqc\", \"__current_case__\": 22, \"output\": [{\"__index__\": 0, \"type\": {\"type\": \"read_distribution\", \"__current_case__\": 6, \"input\": {\"__class__\": \"ConnectedValue\"}}}]}}], \"saveLog\": false, \"title\": \"\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "1.11+galaxy1",
+            "tool_state": "{\"comment\": \"\", \"export\": false, \"flat\": false, \"results\": [{\"__index__\": 0, \"software_cond\": {\"software\": \"rseqc\", \"__current_case__\": 22, \"output\": [{\"__index__\": 0, \"type\": {\"type\": \"read_distribution\", \"__current_case__\": 6, \"input\": {\"__class__\": \"RuntimeValue\"}}}]}}], \"title\": \"\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.24.1+galaxy0",
             "type": "tool",
             "uuid": "788240fb-2e5c-4dd4-9b52-dd88e8a1903f",
             "when": null,
@@ -1841,7 +1845,7 @@
         },
         "39": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0",
             "errors": null,
             "id": 39,
             "input_connections": {
@@ -1855,12 +1859,12 @@
             "name": "MultiQC",
             "outputs": [
                 {
-                    "name": "stats",
-                    "type": "input"
-                },
-                {
                     "name": "html_report",
                     "type": "html"
+                },
+                {
+                    "name": "stats",
+                    "type": "tabular"
                 }
             ],
             "position": {
@@ -1868,15 +1872,15 @@
                 "top": 3058.942374927111
             },
             "post_job_actions": {},
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0",
             "tool_shed_repository": {
-                "changeset_revision": "abfd8a6544d7",
+                "changeset_revision": "f7e2f1eb3a16",
                 "name": "multiqc",
                 "owner": "iuc",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"comment\": \"\", \"export\": false, \"flat\": false, \"results\": [{\"__index__\": 0, \"software_cond\": {\"software\": \"samtools\", \"__current_case__\": 24, \"output\": [{\"__index__\": 0, \"type\": {\"type\": \"idxstats\", \"__current_case__\": 2, \"input\": {\"__class__\": \"ConnectedValue\"}}}]}}], \"saveLog\": false, \"title\": \"\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "1.11+galaxy1",
+            "tool_state": "{\"comment\": \"\", \"export\": false, \"flat\": false, \"results\": [{\"__index__\": 0, \"software_cond\": {\"software\": \"samtools\", \"__current_case__\": 24, \"output\": [{\"__index__\": 0, \"type\": {\"type\": \"idxstats\", \"__current_case__\": 2, \"input\": {\"__class__\": \"RuntimeValue\"}}}]}}], \"title\": \"\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.24.1+galaxy0",
             "type": "tool",
             "uuid": "94ede342-3612-4f8b-93ae-b7acf02900f0",
             "when": null,
@@ -1890,7 +1894,7 @@
         },
         "40": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0",
             "errors": null,
             "id": 40,
             "input_connections": {
@@ -1904,12 +1908,12 @@
             "name": "MultiQC",
             "outputs": [
                 {
-                    "name": "stats",
-                    "type": "input"
-                },
-                {
                     "name": "html_report",
                     "type": "html"
+                },
+                {
+                    "name": "stats",
+                    "type": "tabular"
                 }
             ],
             "position": {
@@ -1917,15 +1921,15 @@
                 "top": 3281.378970585393
             },
             "post_job_actions": {},
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0",
             "tool_shed_repository": {
-                "changeset_revision": "abfd8a6544d7",
+                "changeset_revision": "f7e2f1eb3a16",
                 "name": "multiqc",
                 "owner": "iuc",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"comment\": \"\", \"export\": false, \"flat\": false, \"results\": [{\"__index__\": 0, \"software_cond\": {\"software\": \"picard\", \"__current_case__\": 17, \"output\": [{\"__index__\": 0, \"type\": \"markdups\", \"input\": {\"__class__\": \"ConnectedValue\"}}]}}], \"saveLog\": false, \"title\": \"\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "1.11+galaxy1",
+            "tool_state": "{\"comment\": \"\", \"export\": false, \"flat\": false, \"results\": [{\"__index__\": 0, \"software_cond\": {\"software\": \"picard\", \"__current_case__\": 17, \"output\": [{\"__index__\": 0, \"type\": \"markdups\", \"input\": {\"__class__\": \"RuntimeValue\"}}]}}], \"title\": \"\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.24.1+galaxy0",
             "type": "tool",
             "uuid": "6c80d685-8b9a-4921-b7b4-cd8a6c268be1",
             "when": null,
@@ -1984,7 +1988,7 @@
         },
         "42": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0",
             "errors": null,
             "id": 42,
             "input_connections": {
@@ -1998,12 +2002,12 @@
             "name": "MultiQC",
             "outputs": [
                 {
-                    "name": "stats",
-                    "type": "input"
-                },
-                {
                     "name": "html_report",
                     "type": "html"
+                },
+                {
+                    "name": "stats",
+                    "type": "tabular"
                 }
             ],
             "position": {
@@ -2011,15 +2015,15 @@
                 "top": 2845.740267407461
             },
             "post_job_actions": {},
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0",
             "tool_shed_repository": {
-                "changeset_revision": "abfd8a6544d7",
+                "changeset_revision": "f7e2f1eb3a16",
                 "name": "multiqc",
                 "owner": "iuc",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"comment\": \"\", \"export\": false, \"flat\": false, \"results\": [{\"__index__\": 0, \"software_cond\": {\"software\": \"rseqc\", \"__current_case__\": 22, \"output\": [{\"__index__\": 0, \"type\": {\"type\": \"gene_body_coverage\", \"__current_case__\": 1, \"input\": {\"__class__\": \"ConnectedValue\"}}}]}}], \"saveLog\": false, \"title\": \"\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "1.11+galaxy1",
+            "tool_state": "{\"comment\": \"\", \"export\": false, \"flat\": false, \"results\": [{\"__index__\": 0, \"software_cond\": {\"software\": \"rseqc\", \"__current_case__\": 22, \"output\": [{\"__index__\": 0, \"type\": {\"type\": \"gene_body_coverage\", \"__current_case__\": 1, \"input\": {\"__class__\": \"RuntimeValue\"}}}]}}], \"title\": \"\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.24.1+galaxy0",
             "type": "tool",
             "uuid": "485ceffe-8183-463d-9f3f-e72b20e762d0",
             "when": null,
@@ -2036,5 +2040,5 @@
         "transcriptomics"
     ],
     "uuid": "a2a34bef-f31e-4855-ac05-15ac673bfc87",
-    "version": 10
+    "version": 11
 }

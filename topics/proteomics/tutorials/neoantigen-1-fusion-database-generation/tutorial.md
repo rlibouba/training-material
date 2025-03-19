@@ -4,7 +4,7 @@ layout: tutorial_hands_on
 title: "Neoantigen 1: Fusion-Database-Generation"
 zenodo_link: "https://zenodo.org/records/14365542"
 questions:
-- Why do we need to generate a customized fusion database for proteogenomics research?
+- Why must we generate a customized fusion database for proteogenomics research?
 objectives:
 - Downloading databases related to 16SrRNA data
 - For better neoantigen identification results.
@@ -30,7 +30,7 @@ follow_up_training:
         type: "internal"
         topic_name: proteomics
         tutorials:
-            - neoantigen-2-non-normal-database-generation
+            - neoantigen-2-non-reference-database-generation
 tags: [label-free]
 
 ---
@@ -38,7 +38,7 @@ tags: [label-free]
 
 A neoantigen is a novel peptide (protein fragment) that is produced by cancer cells due to mutations, including gene fusions, that alter the DNA sequence in a way that generates unique proteins not found in normal cells. Because these mutated proteins are unique to the tumor, they are recognized as "foreign" by the immune system. Neoantigens are valuable in immunotherapy because they can serve as specific targets for the immune system, allowing treatments to selectively attack cancer cells while sparing normal tissue. By stimulating an immune response specifically against these neoantigens, therapies like cancer vaccines or T-cell-based treatments can be developed to enhance the body’s natural defense mechanisms, making neoantigens a promising avenue for personalized cancer treatment.
 
-Creating a fusion database is essential in cancer genomics and personalized medicine, as it enables the identification of crucial biomarkers, enhances diagnostic accuracy, and supports therapeutic development. Gene fusions, where parts of two previously separate genes merge, can produce abnormal proteins that drive cancer. Cataloging these fusion events in a database helps researchers identify specific biomarkers linked to cancer types and design more targeted treatments. Additionally, fusion events may lead to unique peptide sequences, known as neoantigens, which are found only in cancer cells. These neoantigens can be targeted by the immune system, making fusion databases valuable in designing personalized immunotherapies like cancer vaccines or T-cell therapies. Some gene fusions also create oncogenic proteins that promote tumor growth, such as the BCR-ABL fusion in chronic myeloid leukemia. Including such information in a database aids in identifying potential therapeutic targets and predicting treatment efficacy. On the diagnostic side, known gene fusions serve as reliable markers, helping clinicians better classify cancer types and choose the most effective treatments. Finally, fusion databases provide a critical reference for researchers studying fusion mechanisms, their impact on disease progression, and their prevalence across cancers, ultimately fueling the discovery of novel treatments and therapies.
+Creating a fusion database is essential in cancer genomics and personalized medicine, as it identifies crucial biomarkers, enhances diagnostic accuracy, and supports therapeutic development. Gene fusions, where parts of two previously separate genes merge, can produce abnormal proteins that drive cancer. Cataloging these fusion events in a database helps researchers identify specific biomarkers linked to cancer types and design more targeted treatments. Additionally, fusion events may lead to unique peptide sequences, known as neoantigens, which are found only in cancer cells. These neoantigens can be targeted by the immune system, making fusion databases valuable in designing personalized immunotherapies like cancer vaccines or T-cell therapies. Some gene fusions also create oncogenic proteins that promote tumor growth, such as the BCR-ABL fusion in chronic myeloid leukemia. Including such information in a database aids in identifying potential therapeutic targets and predicting treatment efficacy. On the diagnostic side, known gene fusions serve as reliable markers, helping clinicians better classify cancer types and choose the most effective treatments. Finally, fusion databases provide a critical reference for researchers studying fusion mechanisms, their impact on disease progression, and their prevalence across cancers, ultimately fueling the discovery of novel treatments and therapies.
 
 To generate the fusion database, RNA star and Arriba tools are used in this workflow.
 

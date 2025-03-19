@@ -134,11 +134,26 @@ forschungszentrum-juelich:
     url: https://www.fz-juelich.de/de
     github: false
 
+
+gis:
+  name: Genome Institute of Singapore
+  short_name: GIS
+  url: https://www.a-star.edu.sg/gis
+  github: false
+
+gbif:
+    short_name: GBIF
+    name: Global Biodiversity Information Facility
+    url: https://www.gbif.org/
+    avatar: "/training-material/shared/images/gbif-standard-green-logo.jpg"
+    github: false
+
 hzi-bifo:
    name: Helmholtz Centre for Infection Research
    short_name: HZI
    url: https://www.helmholtz-hzi.de/en/
    avatar: "/training-material/shared/images/hzi.png"
+
 
 ifb:
     short_name: IFB
@@ -242,6 +257,13 @@ nsf:
     avatar: "/training-material/shared/images/nsf.gif"
     github: false
 
+ou:
+    short_name: OU
+    name: The Open University
+    bio: As the largest university in Europe, we are committed to delivering highly accredited, distance learning degrees, and supporting all students to achieve their academic dreams.
+    url: https://www.open.ac.uk
+    avatar: "/training-material/shared/images/logos/logo_ou.png"
+
 panacea:
     short_name: PanACEA
     name: Pan-African Consortium for the Evaluation of Antituberculosis Antibiotics
@@ -322,6 +344,13 @@ societyprotectionundergroundnetworks:
     url: "https://www.spun.earth"
     avatar: "/training-material/shared/images/spun-logo.png"
 
+spoc:
+    short_name: 🖖🏾SPOC
+    name: 🖖🏾Single-cell & sPatial Omics Community of practice
+    bio: We are a mix of users, developers, and trainers providing feedback and energy to improve and expand the Galaxy single cell and spatial omics capabilities.
+    url: https://galaxyproject.org/community/sig/singlecell/
+    avatar: "/training-material/shared/images/logos/spoc_hand.png"
+
 swiss-tph:
     short_name: SwissTPH
     name: Swiss Tropical and Public Health Institute
@@ -383,4 +412,3 @@ vib:
     avatar: "/training-material/shared/images/logo-vib.png"
     github: false
     ror: "03xrhmk39"
-

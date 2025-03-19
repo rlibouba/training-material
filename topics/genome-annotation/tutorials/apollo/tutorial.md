@@ -105,11 +105,6 @@ In this tutorial we have obtained some data from NCBI related to [*Escherichia c
 
 ## Get data
 
-<!-- Data for E.coli from https://usegalaxy.eu/u/helena-rasche/h/e-coli-k-12-apollo -->
-<!-- other datasets available: -->
-<!-- Apis mellifera: https://zenodo.org/record/3270822 (based on https://hymenoptera.elsiklab.missouri.edu/beebase/download_sequences probably) -->
-<!-- Schizosaccharomyces pombe: https://usegalaxy.eu/u/abretaud/h/apollo-eukaryote-data -->
-
 > <hands-on-title>Data upload</hands-on-title>
 >
 > 0. Create a new history and give it a good name

@@ -23,12 +23,19 @@ requirements:
         - scrna-case_alevin
         - scrna-case_alevin-combine-datasets
         - scrna-case_basic-pipeline
+
+follow_up_training:
+-
+    type: "internal"
+    topic_name: single-cell
+    tutorials:
+        - EBI-retrieval
+
 time_estimation: 1H
 key_points:
 - Cell cycle genes can conceal what is happening in your data if cells are grouping together according to their stage in the cycle
 - Identifying the cell cycle genes and using them to regress out the effects of the cell cycle can reveal underlying patterns in the data
 tags:
-- 10x
 
 contributions:
   authorship:

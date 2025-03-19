@@ -39,7 +39,7 @@
       asserts:
         - that: "has_text"
           text: '<thead><tr><th class="rowheader">Sample Name</th><th id="header_mqc-generalstats-cutadapt-percent_trimmed" class="mqc-generalstats-cutadapt-percent_trimmed " data-dmax="100.0" data-dmin="0.0" data-namespace="Cutadapt" ><span class="mqc_table_tooltip" title="Cutadapt: % Total Base Pairs trimmed">% BP Trimmed</span></th></tr></thead><tbody><tr><th class="rowheader" data-original-sn="GSM461177_2">GSM461177_2</th><td class="data-coloured mqc-generalstats-cutadapt-percent_trimmed "><div class="wrapper"><span class="bar" style="width:2.4925569161554932%; background-color:#c3c7e2;"></span><span class="val">2.5%</span></div></td></tr><tr><th class="rowheader" data-original-sn="GSM461180_2">GSM461180_2</th><td class="data-coloured mqc-generalstats-cutadapt-percent_trimmed "><div class="wrapper"><span class="bar" style="width:12.387319258796483%; background-color:#cbdaeb;"></span><span class="val">12.4%</span></div></td></tr></tbody></table></div></div>'
-    multiqc_fastqc_html:
+    multiqc_falco_html:
       asserts:
         - that: "has_text"
           text: 'All samples have sequences of a single length (37bp).'

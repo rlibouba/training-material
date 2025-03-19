@@ -183,7 +183,7 @@ module Gtn
     # that every link is valid, but we cannot do that for every external site to
     # avoid putting unnecessary pressure on them.
     #
-    # Instead of 
+    # Instead of
     #
     #   [see this other tutorial(https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible/tutorial.html)
     #
@@ -220,7 +220,7 @@ module Gtn
     # that every link is valid, but we cannot do that for every external site to
     # avoid putting unnecessary pressure on them.
     #
-    # Instead of 
+    # Instead of
     #
     #   [see this other tutorial(https://training.galaxyproject.org/training-material/topics/admin/tutorials/ansible/slides.html)
     #
@@ -483,7 +483,7 @@ module Gtn
       end
     end
 
-    ## 
+    ##
     # GTN:009 - This looks like an invalid tool link. There are several ways that tool links can be invalid, and only one correct way to reference a tool
     #
     # Correct
@@ -701,7 +701,7 @@ module Gtn
       end
     end
 
-    ## 
+    ##
     # GTN:034 - Alternative text or alt-text is mandatory for every image in the GTN.
     def self.empty_alt_text(contents)
       find_matching_texts(contents, /!\[\]\(/i)
@@ -1001,7 +1001,7 @@ module Gtn
     def self.cyoa_branches(contents)
       joined_contents = contents.join("\n")
       cyoa_branches = joined_contents.scan(/_includes\/cyoa-choices[^%]*%}/m)
-        .map{|cyoa_line| 
+        .map{|cyoa_line|
           cyoa_line.gsub(/\n/, ' ') # Remove newlines, want it all one one line.
             .gsub(/\s+/, ' ') # Collapse multiple whitespace for simplicity
             .gsub(/_includes\/cyoa-choices.html/, '').gsub(/%}$/, '') # Strip start/end
@@ -1011,13 +1011,13 @@ module Gtn
       # NOTE: Errors on this line usually mean that folks have used ' instead of " in their CYOA.
 
 
-      # cyoa_branches = 
+      # cyoa_branches =
       # [{"option1"=>"Quick one tool method",
       #   "option2"=>"Convert to AnnData object compatible with Filter, Plot, Explore workflow",
       #   "default"=>"Quick one tool method",
       #   "text"=>"Choose below if you just want to convert your object quickly or see how it all happens behind the scenes!",
       #   "disambiguation"=>"seurat2anndata\""},
-      
+
       # We use slugify_unsafe to convert it to a slug, now we should check:
       # 1. Is it unique in the file? No duplicate options?
       # 2. Is every branch used?
@@ -1027,7 +1027,7 @@ module Gtn
       slugified = options.map{|o| [o, unsafe_slugify(o)]}
       slugified_grouped = slugified.group_by{|before, after| after}
         .map{|k, pairs| [k, pairs.map{|p| p[0]}]}.to_h
-      
+
       errors = []
       if slugified_grouped.values.any?{|v| v.length > 1}
         dupes = slugified_grouped.select{|k, v| v.length > 1}
@@ -1200,7 +1200,13 @@ module Gtn
           url = nil
         end
 
-        results.push([x.key, 'Missing both a DOI and a URL. Please add one of the two.']) if doi.nil? && url.nil?
+        begin
+          isbn = x.isbn
+        rescue StandardError
+          isbn = nil
+        end
+
+        results.push([x.key, 'Missing a DOI, URL or ISBN. Please add one of the three.']) if doi.nil? && url.nil? && isbn.nil?
 
         begin
           x.title

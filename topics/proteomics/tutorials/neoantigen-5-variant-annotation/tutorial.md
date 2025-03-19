@@ -238,7 +238,7 @@ To convert proteomic coordinates to genomic coordinates, it is essential to acco
 >            - {% icon param-file %} *"Tabular Dataset for Table"*: `output` (output of **Query Tabular** {% icon tool %})
 >    - *"SQL Query to generate tabular output"*:
 > ``` sql
-> SELECT t1.*, t1.c4 * 3 AS c2_multiplied, t1.c5 * 3 AS c3_multiplied FROM t1
+> SELECT t1.*, (t1.c4 - 1) * 3 AS c2_multiplied, t1.c5 * 3 AS c3_multiplied FROM t1
 > ```
 >    - *"include query result column headers"*: `No`
 >

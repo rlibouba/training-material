@@ -121,9 +121,14 @@
                     "output_name": "output"
                 }
             },
-            "inputs": [],
-            "label": null,
-            "name": "FastQC",
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "Falco/MultiQC"
+                }
+            ],
+            "label": "Falco/MultiQC",
+            "name": "QC-Falco-MultiQC",
             "outputs": [],
             "position": {
                 "left": 302.921245411475,
@@ -132,6 +137,7 @@
             "subworkflow": {
                 "a_galaxy_workflow": "true",
                 "annotation": "",
+                "comments": [],
                 "creator": [
                     {
                         "class": "Person",
@@ -186,7 +192,7 @@
                 ],
                 "format-version": "0.1",
                 "license": "MIT",
-                "name": "FastQC",
+                "name": "QC-Falco-MultiQC",
                 "steps": {
                     "0": {
                         "annotation": "input fastqs",
@@ -227,7 +233,7 @@
                             }
                         },
                         "inputs": [],
-                        "label": "Flatten collection for FastQC",
+                        "label": "Flatten collection for Falco",
                         "name": "Flatten collection",
                         "outputs": [
                             {
@@ -250,7 +256,7 @@
                     },
                     "2": {
                         "annotation": "",
-                        "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.73+galaxy0",
+                        "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/falco/falco/1.2.4+galaxy0",
                         "errors": null,
                         "id": 2,
                         "input_connections": {
@@ -261,20 +267,20 @@
                         },
                         "inputs": [
                             {
-                                "description": "runtime parameter for tool FastQC",
+                                "description": "runtime parameter for tool Falco",
                                 "name": "adapters"
                             },
                             {
-                                "description": "runtime parameter for tool FastQC",
+                                "description": "runtime parameter for tool Falco",
                                 "name": "contaminants"
                             },
                             {
-                                "description": "runtime parameter for tool FastQC",
+                                "description": "runtime parameter for tool Falco",
                                 "name": "limits"
                             }
                         ],
-                        "label": "FastQC check read qualities",
-                        "name": "FastQC",
+                        "label": null,
+                        "name": "Falco",
                         "outputs": [
                             {
                                 "name": "html_file",
@@ -290,23 +296,23 @@
                             "top": 7.5333251953125
                         },
                         "post_job_actions": {},
-                        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.73+galaxy0",
+                        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/falco/falco/1.2.4+galaxy0",
                         "tool_shed_repository": {
-                            "changeset_revision": "3d0c7bdf12f5",
-                            "name": "fastqc",
-                            "owner": "devteam",
+                            "changeset_revision": "959a14c1f2dd",
+                            "name": "falco",
+                            "owner": "iuc",
                             "tool_shed": "toolshed.g2.bx.psu.edu"
                         },
-                        "tool_state": "{\"adapters\": {\"__class__\": \"RuntimeValue\"}, \"contaminants\": {\"__class__\": \"RuntimeValue\"}, \"input_file\": {\"__class__\": \"ConnectedValue\"}, \"kmers\": \"7\", \"limits\": {\"__class__\": \"RuntimeValue\"}, \"min_length\": null, \"nogroup\": false, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-                        "tool_version": "0.73+galaxy0",
+                        "tool_state": "{\"adapters\": {\"__class__\": \"RuntimeValue\"}, \"bisulfite\": false, \"contaminants\": {\"__class__\": \"RuntimeValue\"}, \"generate_summary\": false, \"input_file\": {\"__class__\": \"ConnectedValue\"}, \"limits\": {\"__class__\": \"RuntimeValue\"}, \"nogroup\": false, \"reverse_complement\": false, \"subsample\": \"1\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+                        "tool_version": "1.2.4+galaxy0",
                         "type": "tool",
-                        "uuid": "46123d1b-6de3-4484-b9c8-8c0f4f84c745",
+                        "uuid": "e8280920-10c3-4f28-bc44-52ee7bf3aede",
                         "when": null,
                         "workflow_outputs": []
                     },
                     "3": {
                         "annotation": "",
-                        "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
+                        "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0",
                         "errors": null,
                         "id": 3,
                         "input_connections": {
@@ -316,16 +322,16 @@
                             }
                         },
                         "inputs": [],
-                        "label": "Combine FastQC results",
+                        "label": "Combine Falco results",
                         "name": "MultiQC",
                         "outputs": [
                             {
-                                "name": "stats",
-                                "type": "input"
-                            },
-                            {
                                 "name": "html_report",
                                 "type": "html"
+                            },
+                            {
+                                "name": "stats",
+                                "type": "tabular"
                             }
                         ],
                         "position": {
@@ -333,28 +339,28 @@
                             "top": 178.73880790038464
                         },
                         "post_job_actions": {},
-                        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
+                        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0",
                         "tool_shed_repository": {
-                            "changeset_revision": "abfd8a6544d7",
+                            "changeset_revision": "f7e2f1eb3a16",
                             "name": "multiqc",
                             "owner": "iuc",
                             "tool_shed": "toolshed.g2.bx.psu.edu"
                         },
-                        "tool_state": "{\"comment\": \"\", \"export\": false, \"flat\": false, \"results\": [{\"__index__\": 0, \"software_cond\": {\"software\": \"fastqc\", \"__current_case__\": 8, \"output\": [{\"__index__\": 0, \"type\": \"data\", \"input\": {\"__class__\": \"ConnectedValue\"}}]}}], \"saveLog\": false, \"title\": \"\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-                        "tool_version": "1.11+galaxy1",
+                        "tool_state": "{\"comment\": \"\", \"export\": false, \"flat\": false, \"results\": [{\"__index__\": 0, \"software_cond\": {\"software\": \"fastqc\", \"__current_case__\": 8, \"output\": [{\"__index__\": 0, \"type\": \"data\", \"input\": {\"__class__\": \"ConnectedValue\"}}]}}], \"title\": \"\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+                        "tool_version": "1.24.1+galaxy0",
                         "type": "tool",
                         "uuid": "12c04a3a-06c3-4305-a985-bf25a9ca16f1",
                         "when": null,
                         "workflow_outputs": [
                             {
-                                "label": "multiqc_fastqc_html",
+                                "label": "multiqc_falco_html",
                                 "output_name": "html_report",
                                 "uuid": "723286a5-6825-4c4a-a24e-c76daef14c87"
                             }
                         ]
                     }
                 },
-                "tags": "",
+                "tags": [],
                 "uuid": "210450ba-2e36-4911-907f-7825a1014e04"
             },
             "tool_id": null,
@@ -363,9 +369,9 @@
             "when": null,
             "workflow_outputs": [
                 {
-                    "label": "multiqc_fastqc_html",
-                    "output_name": "multiqc_fastqc_html",
-                    "uuid": "5f7652f1-e225-4ad1-8dbd-4d21544edb89"
+                    "label": "multiqc_falco_html",
+                    "output_name": "multiqc_falco_html",
+                    "uuid": "cda73d3b-b2c9-4393-b9f6-2fe347761aa3"
                 }
             ]
         },
@@ -2598,5 +2604,5 @@
         "transcriptomics"
     ],
     "uuid": "172c291e-b0a6-4ae5-878b-c987e8fbef69",
-    "version": 7
+    "version": 8
 }

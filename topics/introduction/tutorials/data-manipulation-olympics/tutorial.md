@@ -160,8 +160,8 @@ Before we can do any manipulation, we will need some data. Let's upload our tabl
 >    > > 4. There are 17 columns in this file. There are multiple ways to find this answer:
 >    > >    - Count the columns manually (only doable for small files)
 >    > >    - In the expanded view, scroll sideways on the dataset preview, at the top the columns are numbered
->    > >    - Click on the {% icon galaxy-info %} i icon on the dataset, here you will find more detailed information about the file and the job that created it.
->    > >      At the bottom is also a preview (peek) of the dataset, and numbered columns
+>    > >    - Click on the {% icon galaxy-info %} i icon on the dataset; here you will find more detailed information about the file and the job that created it.
+>    > >      At the bottom is also a preview (peek) of the dataset and numbered columns
 >    > >
 >    > > ![a screenshot of the expanded view of the dataset in the history, it shows the datatype, number of lines in the file, and a preview
 >    > > of the dataset with numbered columns](./images/columns-number.png)
@@ -207,7 +207,7 @@ This tutorial is structured a bit differently than most. **You do not have to do
 
 # File Format Conversion
 
-The file we uploaded is a `.tsv` file. This stands for *tab-separated values*. This means that this is a file containing rows and columns, where a TAB character is used to signify a column ends and a new one begins. Galaxy is great at understanding tab-separated files files, and most of the data manipulation tools are designed to work with such files.
+The file we uploaded is a `.tsv` file. This stands for *tab-separated values*. This means that this is a file containing rows and columns, where a TAB character is used to signify a column ends and a new one begins. Galaxy is great at understanding tab-separated files, and most of the data manipulation tools are designed to work with such files.
 
 A similar format you may come across a lot in data science, is the `.csv` file, or *comma-separated values* file. This is the same as `.tsv`, but uses comma (`,`) characters to indicate new columns, instead of TAB (`\t`) characters.
 
@@ -232,7 +232,7 @@ Galaxy can convert these two formats into each other.
 >    > >
 >    > > 1. Galaxy does not display the table as nicely as before.
 >    > >    This is because Galaxy is optimized to work with `tsv` files. For most rows you now see commas separating the different columns.
->    > > 2. If the data in a column contains a comma (e.g. in this file we have events such as `swimming 5,000 meters`), we put the value in quotes to signifiy that that comma is part of the data, not a column delimiter.
+>    > > 2. If the data in a column contains a comma (e.g. in this file we have events such as `swimming 5,000 meters`), we put the value in quotes to signify that that comma is part of the data, not a column delimiter.
 >    > >
 >    > {: .solution}
 >    {: .question}
@@ -343,7 +343,7 @@ This is great, but maybe it would make more sense to sort alphabetically by athl
 
 ## Sort on multiple columns at once
 
-So we want to sort twice, first by year, an then within each year, we sort again alphabetically by name. The sort tool can do this!
+So we want to sort twice, first by year, and then within each year, we sort again alphabetically by name. The sort tool can do this!
 
 
 > <hands-on-title>Sort table based on a column</hands-on-title>
@@ -547,7 +547,7 @@ This file contains a lot of data, but we may only be interested in a subset of t
 >
 >    > <question-title></question-title>
 >    >
->    > 1. How many lines do you expect in the this file?
+>    > 1. How many lines do you expect in this file?
 >    > 2. How many lines are in this file? Were you right?
 >    >
 >    > > <solution-title noprefix>Hints</solution-title>
@@ -560,9 +560,9 @@ This file contains a lot of data, but we may only be interested in a subset of t
 >    > > <solution-title noprefix>Answers</solution-title>
 >    > >
 >    > > 1. The original file has 234,523 lines, and the Winter Olympics had 44,681 lines. So we would expect 234,523 - 44,681 = 189,842 rows of data. Since we have subtracted the header line in this equation as well, we expect the Summer Olympics file to have 1 more line that this, so 189,843 total lines.
->    > > 2. 189,843. If you were off by one or two lines, it may have been that you counted the header lines double
+>    > > 2. 189,843. If you were off by one or two lines, it may have been that you counted the header lines double.
 >    > > <br>
->    > > It is always useful to take a moment to think about the expected outcome, this makes it easier to spot mistakes and will save you time in the long run.
+>    > > It is always useful to take a moment to think about the expected outcome; this makes it easier to spot mistakes and will save you time in the long run.
 >    > >
 >    > {: .solution}
 >    {: .question}
@@ -745,7 +745,7 @@ For example, if we want to find athletes with three-part names by counting space
 >    > <question-title></question-title>
 >    >
 >    > 1. How would you filter rows where the 2nd column contains **three spaces** (i.e., four-part names)?
->    > 2. How many medals were wone by athletes with five-part names **or more**?
+>    > 2. How many medals were won by athletes with five-part names **or more**?
 >    > 3. How many parts does the longest name have? Give an example of such a name.
 >    > 4. Bonus: **How many** athletes have 6-part names?
 >    >
@@ -1218,7 +1218,7 @@ You may have noticed that we could also provide multiple columns to group on. If
 > > 3. Any calculations you run which try to compute anything over the weight column (Column 8) will fail. Please see the [final exercise section](#exercises-putting-it-all-together) for the solution
 > >    to this question, in which we will first clean up the data in the weight column using the Find and Replace operation.
 > >
-> >    This type of situation occurs quite frequently, where you data does not fit with your expectations or assumptions, and you may have to perform additional data
+> >    This type of situation occurs quite frequently, where your data does not fit with your expectations or assumptions, and you may have to perform additional data
 > >    manipulation steps to clean up your data. It is very useful to know how to read the error messages of tools. Depending on the tool, the error messages may or may
 > >    not be very informative, but in many cases it can give you a clue as to why it failed, which sometimes can be fixed by you. If you think it is a problem with the
 > >    tool itself, please submit a bug report, and the tool authors will be able to have a look at it. More information about troubleshooting and reporting errors can
@@ -1477,7 +1477,7 @@ Look at the `birth_day` column. It has values in a format like `12 December`. Su
 >
 >    > <question-title></question-title>
 >    >
->    > 1. How do we match on the birthday format? How strict/exact shoule we be here?
+>    > 1. How do we match on the birthday format? How strict/exact should we be here?
 >    > 2. How do we captures both the day and the month?
 >    > 3. How do we refer to the values we captured (for the replacement value)
 >    >
@@ -1593,7 +1593,7 @@ Notice that during this step, we also changed the order of the columns. This too
 > >    - {% icon param-text %} *"Header name"*: `athlete_id`
 > >    - {% icon param-toggle %} *"Keep named columns"*: `No`
 > >
-> >    **Note:** the *"Keep named columns"* parameter determines wheter we keep or remove the columns we specified.
+> >    **Note:** the *"Keep named columns"* parameter determines whether we keep or remove the columns we specified.
 > >    You could have obtained the same result by supplying all column names except the first one, and selecting
 > >    *"Keep named columns"*: `No`, but that would have been a lot more work.
 > >
@@ -1723,7 +1723,7 @@ We would now like to take our Olympics dataset as the basis, and add columns to 
 >    > > <solution-title></solution-title>
 >    > >
 >    > > 1. All the columns from the country information file are added to the end of each row of our olympics dataset
->    > > 2. Our olympics datset had 17 columns, the country information file has 56 columns. Therefore we have 17+56=73 columns columns in our resulting file. This also means the NOC column
+>    > > 2. Our Olympics dataset had 17 columns, the country information file has 56 columns. Therefore, we have 17+56=73 columns in our resulting file. This also means the NOC column
 >    > >    we joined on appears twice in our output.
 >    > > 3. There is a lot of data duplication in this file now. The exact same country information is added to every line of every athlete from a certain country.
 >    > >    This means much larger file size, and more usage of your quota.
@@ -1770,7 +1770,7 @@ First, let's get this data for the 2022 Olympics
 {: .hands_on}
 
 
-Since this new dataset has the exact same structure (number and order of columns), we can simple add the lines from this file to the end of our existing `olympics.tsv` file.
+Since this new dataset has the exact same structure (number and order of columns), we can simply add the lines from this file to the end of our existing `olympics.tsv` file.
 
 
 > <hands-on-title>Adding 2022 Olympics to our dataset</hands-on-title>
@@ -1982,7 +1982,7 @@ row a weight range is used), and then answering the question a couple of questio
 > <question-title noprefix>Exercise 2: Data cleaning and computations of the weight column</question-title>
 >
 > 1. Get a list of all the values that occur in the weight column, take note of all the values that are not a single number or `NA`; anything else should be cleaned up
-> 2. Clean up the weight column (Colum 8) so that we only have single numbers; weight classes (e.g. `63-78`) should be replace by the lower bound (`63`) of that class
+> 2. Clean up the weight column (Column 8) so that we only have single numbers; weight classes (e.g. `63-78`) should be replace by the lower bound (`63`) of that class
 > 3. How heavy was the lightest woman competing in the Biathlon? And the heaviest?
 >
 > > <solution-title noprefix>Hints</solution-title>

@@ -31,14 +31,25 @@ requirements:
   tutorials:
   - scrna-preprocessing
   - scrna-preprocessing-tenx
+
+follow_up_training:
+-
+  type: "internal"
+  topic_name: single-cell
+  tutorials:
+        - EBI-retrieval
+
 tags:
 - 10x
-contributors:
-- bebatut
-- hrhotz
-- mtekman
-- pavanvidem
-- dianichj
+
+contributions:
+  authorship:
+  - bebatut
+  - hrhotz
+  - mtekman
+  - pavanvidem
+  - dianichj
+
 gitter: Galaxy-Training-Network/galaxy-single-cell
 recordings:
 - captioners:

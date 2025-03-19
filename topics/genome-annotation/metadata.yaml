@@ -16,7 +16,6 @@ requirements:
     topic_name: introduction
 editorial_board:
   - hexylena
-  - slugger70
   - abretaud
 
 gitter: galaxy-genome-annotation/Lobby

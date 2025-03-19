@@ -36,12 +36,14 @@ follow_up_training:
     tutorials:
       - scrna-scanpy-pbmc3k
 
-contributors:
-  - mtekman
-  - hrhotz
-  - blankenberg
-  - nomadscientist
-  - pavanvidem
+contributions:
+  authorship:
+    - mtekman
+    - hrhotz
+    - blankenberg
+    - pavanvidem
+  editing:
+    - nomadscientist
 
 gitter: Galaxy-Training-Network/galaxy-single-cell
 
@@ -279,7 +281,7 @@ We will now proceed to demultiplex, map, and quantify both sets of reads using t
 
 > <hands-on-title></hands-on-title>
 >
-> {% tool [RNA STARsolo](toolshed.g2.bx.psu.edu/repos/iuc/rna_starsolo/rna_starsolo/2.7.10b+galaxy3) %}  with the following parameters:
+> {% tool [RNA STARsolo](toolshed.g2.bx.psu.edu/repos/iuc/rna_starsolo/rna_starsolo/2.7.11a+galaxy1) %}  with the following parameters:
 >    - *"Custom or built-in reference genome"*: `Use a built-in index`
 >        - *"Reference genome with or without an annotation"*: `use genome reference without builtin gene-model`
 >            - *"Select reference genome"*: `Human (Homo Sapiens): hg19 Full` or `Human (Homo Sapiens) (b37): hg19`
@@ -327,7 +329,7 @@ Let us investigate the output log. This type of quality control is essential in 
 
 > <hands-on-title></hands-on-title>
 >
-> {% tool [MultiQC](toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.9+galaxy1) %} with the following parameters:
+> {% tool [MultiQC](toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.27+galaxy0) %} with the following parameters:
 >    - In *"Results"*:
 >      - In *"1:Results"*:
 >        - *"Which tool was used generate logs?"*: `STAR`

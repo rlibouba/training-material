@@ -59,8 +59,7 @@ a-asai:
 
 abretaud:
     name: Anthony Bretaudeau
-    email: anthony.bretaudeau@inrae.fr
-    twitter: abretau
+    email: anthony.bretaudeau@irisa.fr
     matrix: 'abretaud:matrix.org'
     orcid: 0000-0003-0914-2470
     joined: 2017-09
@@ -72,6 +71,7 @@ abretaud:
       lon: -1.64
     fediverse: https://genomic.social/@abretaud
     fediverse_flavor: mastodon
+    bluesky: abretaud.bsky.social
     affiliations:
       - gallantries
       - eurosciencegateway
@@ -92,6 +92,8 @@ adya29:
     email: adya_shreya@gis.a-star.edu.sg
     joined: 2024-12
     linkedin: adya-shreya
+    affiliations:
+      - spoc
     location:
       country: SG
 
@@ -101,6 +103,8 @@ adairama:
     orcid: 0000-0002-7598-2892
     linkedin: adairama
     joined: 2024-12
+    affiliations:
+      - spoc
     location:
       country: SG
 
@@ -506,6 +510,12 @@ Camila-goclowski:
     joined: 2023-01
     email: camila.goclowski@gmail.com
     linkedin: camila-goclowski
+    former_affiliations:
+      - spoc
+
+carloscheemendonca:
+    name: Carlos Chee Mendonça
+    joined: 2025-01
 
 charitylaw:
     name: Charity Law
@@ -703,6 +713,8 @@ dianichj:
         email: dianachj@informatik.uni-freiburg.de
         orcid: 0000-0002-5857-1477
         joined: 2024-08
+        affiliations:
+          - spoc
 
 DinithiRajapaksha:
         name: Dinithi Rajapaksha
@@ -978,6 +990,11 @@ gatwirival:
     twitter: ValentineGatwi3
     joined: 2021-10
 
+ggautreau:
+    name: Guillaume Gautreau
+    elixir_node: fr
+    joined: 2025-03
+
 gf777:
     name: Giulio Formenti
     joined: 2022-01
@@ -1001,6 +1018,8 @@ GokceOGUZ:
     email: gokce_oguz@gis.a-star.edu.sg
     orcid: 0000-0003-1044-7204
     linkedin: gokce-oguz
+    affiliations:
+      - spoc
     location:
       country: SG
 
@@ -1018,6 +1037,11 @@ guillaume-gricourt:
 hannahkimincompbio:
     name: Hannah Kim
     joined: 2024-09
+
+hchiapello:
+    name: Hélène Chiapello
+    elixir_node: fr
+    joined: 2025-03
 
 hdashnow:
     name: Harriet Dashnow
@@ -1052,6 +1076,9 @@ hexhowells:
     email: hexhowells@gmail.com
     orcid: 0009-0008-9422-6380
     joined: 2023-06
+    affiliations:
+      - ou
+      - spoc
 
 hexylena:
     name: Helena Rasche
@@ -1197,6 +1224,17 @@ jennydg:
 jfallmann:
     name: Joerg Fallmann
     joined: 2017-09
+
+wennj:
+    name: Jörg Wennmann
+    email: joerg.wennmann@julius-kuehn.de
+    orcid: 0000-0003-3060-8992
+    contact_for_training: true
+    joined: 2025-01
+    location:
+      country: DE
+      lat: 49.449466
+      lon: 8.640339
 
 jfaulon:
     name: Jean-Loup Faulon
@@ -1397,6 +1435,14 @@ kostrykin:
       - elixir-europe
       - deNBI
 
+KristinaGomoryova:
+    name: Kristina Gomoryova
+    orcid: 0000-0003-4407-3917
+    joined: 2025-01
+    email: gomoryova@sci.muni.cz
+    elixir_node: cz
+    twitter: kristina_gomory
+
 kxk302:
     name: Kaivan Kamali
     email: kxk302@gmail.com
@@ -1417,6 +1463,12 @@ Lain-inrae:
     elixir_node: fr
     affiliations:
       - elixir-europe
+
+laurarussell:
+    name: Laura Russell
+    joined: 2025-01
+    affiliations:
+      - gbif
 
 lcooper:
     name: Laura Cooper
@@ -1577,6 +1629,11 @@ MarisaJL:
     twitter: Marisa_Loach
     email: marisa.loach@open.ac.uk
     joined: 2022-10
+    affiliations:
+      - spoc
+      - ou
+    former_affiliations:
+      - uni-freiburg
 
 martenson:
     name: Martin Čech
@@ -1692,6 +1749,17 @@ mcmaniou:
     affiliations:
       - elixir-europe
 
+MD-Chem:
+    name: Mohua Das
+    joined: 2024-12
+    orcid: 0000-0002-8891-6333
+    email: dasmohua1991@gmail.com
+    affiliations:
+      - gis
+      - spoc
+    location:
+        country: SG
+
 Mehgan-E:
     name: Mehgan Evans
     email: mehgancaseyevans1@gmail.com
@@ -1792,6 +1860,7 @@ mtekman:
     elixir_node: de
     affiliations:
       - uni-freiburg
+      - spoc
     former_affiliations:
       - elixir-europe
 
@@ -1818,6 +1887,7 @@ Nilchia:
     affiliations:
       - uni-freiburg
       - elixir-europe
+      - spoc
 
 smza:
     name: Munazah Andrabi
@@ -1892,18 +1962,24 @@ njall:
     joined: 2019-02
 
 nomadscientist:
-    name: Wendi Bacon
-    email: wendi.bacon@open.ac.uk
-    twitter: WendiBacon1
-    matrix: 'nomadscientist:matrix.org'
-    joined: 2020-03
-    elixir_node: uk
-    orcid: 0000-0002-8170-8806
-    bio: Senior Lecturer at The Open University
-    fediverse: https://mstdn.science/@wendibacon1
-    fediverse_flavor: mastodon
     affiliations:
       - elixir-europe
+      - ou
+      - spoc
+    bio: Senior Lecturer at The Open University
+    location:
+      country: UK
+    elixir_node: uk
+    email: wendi.bacon@open.ac.uk
+    #fediverse: https://mstdn.science/@wendibacon1
+    #fediverse_flavor: mastodon
+    former_affiliations:
+      - embl-ebi
+    joined: 2020-03
+    linkedin: wendi-bacon-7462aa100
+    matrix: 'nomadscientist:matrix.org'
+    name: Wendi Bacon
+    orcid: 0000-0002-8170-8806
 
 npalopoli:
     name: Nicolas Palopoli
@@ -2076,6 +2152,7 @@ pavanvidem:
     affiliations:
       - uni-freiburg
       - elixir-europe
+      - spoc
 
 pickettbd:
     name: Brandon Pickett
@@ -2088,6 +2165,16 @@ pclo:
 pcm32:
     name: Pablo Moreno
     joined: 2019-06
+
+PhilReedData:
+    name: Phil Reed
+    orcid: 0000-0002-4479-715X
+    bluesky: philreeddata.bsky.social
+    elixir_node: uk
+    bio: "Research Community & Training Manager"
+    joined: 2025-02
+    affiliations:
+      - elixir-europe
 
 plushz:
     name: Polina Polunina
@@ -2166,6 +2253,15 @@ rahmot:
     email: afolabirahmot09@gmail.com
     joined: 2021-10
     linkedin: rahmot-afolabi
+
+ralfg:
+    name: Ralf Gabriels
+    joined: 2025-02
+    elixir_node: be
+
+raphaelmourad:
+    name: Raphael Mourad
+    joined: 2025-02
 
 Rassine:
     name: Ankerl Yassine
@@ -2310,6 +2406,9 @@ sbenateau:
     affiliations:
       - elixir-europe
 
+scottcain:
+    name: Scott Cain
+    joined: 2025-01
 
 sebastian-schaaf:
     name: Sebastian Schaaf
@@ -2354,6 +2453,15 @@ Shorla:
     email: Sogunkelu@gmail.com
     joined: 2021-10
 
+shrutikhare-git:
+    name: Shruti Khare
+    joined: 2024-12
+    email: skshrutikhare@gmail.com
+    orcid: 0000-0001-5622-2663
+    affiliations:
+      - spoc
+    location:
+      country: SG
 shwdey:
     name: Shweta Pandey
     email: shwphd@gmail.com
@@ -2415,6 +2523,13 @@ Sofokli5:
 sophia120199:
     name: Sophia Hampe
     joined: 2023-04
+
+sophiepamerlon:
+    name: Sophie Pamerlon
+    joined: 2025-01
+    affiliations:
+      - pndb
+      - gbif
 
 stain:
     name: Stian Soiland-Reyes
@@ -2676,12 +2791,19 @@ vloux:
     name: Valentin Loux
     joined: 2019-04
 
+wandrilled:
+    name: Wandrille Duchemin
+    joined: 2025-02
+    elixir_node: ch
+
 wee-snufkin:
     name: Julia Jakiela
     email: juliajot36@gmail.com
     joined: 2022-06
     elixir_node: uk
     orcid: 0009-0001-2017-8805
+    affiliations:
+      - spoc
 
 willdurand:
     name: William Durand
@@ -2843,12 +2965,19 @@ MennaGamal:
     name: Menna Gamal
     email: mennayoussef@live.com
     joined: 2024-09
+    affiliations:
+      - ou
+      - spoc
 
 tbrown91:
     name: Tom Brown
     email: brown@izw-berlin.de
     orcid: 0000-0001-8293-4816
     joined: 2024-08
+
+tStehling:
+    name: Thorben Stehling
+    joined: 2024-11
 
 rmassei:
     name: Riccardo Massei
@@ -2857,4 +2986,3 @@ rmassei:
     joined: 2024-11
     affiliations:
       - nfdi4bioimage
-

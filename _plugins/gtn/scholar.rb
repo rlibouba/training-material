@@ -29,6 +29,8 @@ module Gtn
       text += " <a href=\"https://doi.org/#{doi}\">#{doi}</a>" if doi
       url = entry.fetch('url', nil)
       text += " <a href=\"#{url}\">#{url}</a>" if url && !(url.index('doi.org') && entry.doi)
+      isbn = entry.fetch('isbn', nil)
+      text += " ISBN: #{isbn}" if isbn
 
       text
     end

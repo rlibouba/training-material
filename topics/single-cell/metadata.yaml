@@ -18,7 +18,7 @@ community_ctas:
     link_text: Introduction to Galaxy
     icon: tutorial
   - description: |
-      The Single Cell & Galaxy Communities are also available via Slack
+      The Single Cell & Galaxy learners are on Slack
     link: https://gxy.io/gtn-slack
     link_text: GTN Slack Workspace
     icon: comment
@@ -87,7 +87,7 @@ subtopics:
     description: "These tutorials cover a range of needs for importing data from different sources, to changing data into different formats to move from one analysis to the other."
   - id: exploratory
     title: "Exploratory Analyses"
-    description: "What do you do with your list of genes? Come here to explore your results more!"
+    description: "You have clusters and you have genes. What can you do now? Come here to explore your results more!"
 
 
 references:
@@ -102,4 +102,3 @@ references:
     title: "User-friendly, scalable tools and workflows for single-cell RNA-seq analysis"
     link: "https://www.nature.com/articles/s41592-021-01102-w"
     summary: ""
-

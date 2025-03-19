@@ -72,7 +72,7 @@ module Jekyll
               lang = context.registers[:page].fetch('lang', 'en')
               lang = 'en' if lang.nil?
             end
-            lang = 'en' if (lang != 'en') && (lang != 'es')
+            lang = 'en' if lang.nil?
             if (box_type != 'none') && !box_type.nil?
               _box_id, box_title = Gtn::Boxify.generate_title(box_type, title, lang,
                                                               context.registers[:page]['path'])

@@ -43,7 +43,7 @@ install-conda: ## install Miniconda
 .PHONY: install-conda
 
 create-env: ## create conda environment
-	if ${CONDA} env list | grep '^${CONDA_ENV}'; then \
+	if ${CONDA} env list | grep '^\s*${CONDA_ENV}'; then \
 	    ${CONDA} env update -f ${ENV_FILE}; \
 	else \
 	    ${CONDA} env create -f ${ENV_FILE}; \
@@ -274,6 +274,7 @@ clean: ## clean up junk files
 	@rm -rf vendor
 	@rm -rf node_modules
 	@rm -rf .jekyll-metadata
+	@rm -rf .jekyll-cache
 	@find . -name .DS_Store -exec rm {} \;
 	@find . -name '*~' -exec rm {} \;
 .PHONY: clean

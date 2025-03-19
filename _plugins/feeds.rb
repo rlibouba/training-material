@@ -541,9 +541,9 @@ def generate_event_feeds(site)
           xml.updated(Gtn::PublicationTimes.obtain_time(page.path).to_datetime.rfc3339)
 
           # TODO: find a better solution maybe with namespaces?
-          # xml.category(term: "starts:#{page.data['date_start'].to_datetime.rfc3339}")
-          # xml.category(term: "ends:#{(page.data['date_end'] || page.data['date_start']).to_datetime.rfc3339}")
-          # xml.category(term: "days:#{page.data['duration']}")
+          xml.category(term: "starts:#{page.data['date_start'].to_datetime.rfc3339}")
+          xml.category(term: "ends:#{(page.data['date_end'] || page.data['date_start']).to_datetime.rfc3339}")
+          xml.category(term: "days:#{page.data['duration']}")
 
           # xml.path(page.path)
           xml.category(term: "new #{page['layout']}")

@@ -581,7 +581,7 @@ Now that we have built our workflow, let's use it on some different data. For ex
 >    - Display the "Galaxy 101" history in the Center pane by clicking "Open in Center pane" button:
 >    ![Opening a history in the center pane](../../images/open_in_center_pane_button.png)
 >
->    - Drag an drop `Exons` dataset into the empty history created at step 1
+>    - Drag and drop `Exons` dataset into the empty history created at step 1
 >    ![Drag and drop of `Exons` dataset in the history overview](../../images/drag_n_drop_dataset.gif)
 > 3. Click the Home icon {% icon galaxy-home %} (or **Analyze Data** on older Galaxy versions) at the top to return to the main analysis window
 >

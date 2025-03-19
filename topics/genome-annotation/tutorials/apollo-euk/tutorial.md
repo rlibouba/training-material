@@ -2,7 +2,7 @@
 layout: tutorial_hands_on
 
 title: Refining Genome Annotations with Apollo (eukaryotes)
-zenodo_link: https://zenodo.org/record/3270822
+zenodo_link: https://zenodo.org/record/6920962
 tags:
   - gmod
   - eukaryote
@@ -66,7 +66,7 @@ This demo is inspired by the [Apollo User's Guide](https://genomearchitect.readt
 > If you're doing this tutorial on your own, or if the instructor has not set up a specific Apollo organism for you, select `Create your own organism`.
 {: .comment}
 
-{% include _includes/cyoa-choices.html option1="Create your own organism" option2="Use a pre-created organism" default="Create your own organism" %}
+{% include _includes/cyoa-choices.html option1="Create-your-own-organism" option2="Use a pre-created organism" default="Create-your-own-organism" %}
 
 > <agenda-title></agenda-title>
 >
@@ -111,9 +111,9 @@ In this tutorial we use the same data as in the [Funannotate](../funannotate/tut
 >     -> `{{ page.title }}`):
 >
 >    ```
->    https://zenodo.org/record/3270822/files/genome.fasta
->    https://zenodo.org/record/3270822/files/annotation.gff3
->    https://zenodo.org/record/3270822/files/rnaseq.bam
+>    https://zenodo.org/record/6920962/files/genome.fasta
+>    https://zenodo.org/record/6920962/files/annotation.gff3
+>    https://zenodo.org/record/6920962/files/rnaseq.bam
 >    ```
 >
 >    {% snippet faqs/galaxy/datasets_import_via_link.md %}
