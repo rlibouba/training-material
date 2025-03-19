@@ -59,10 +59,10 @@ In this tutorial, we will use two software tools, Helixer and Braker3, to annota
 The idea of this tutorial is to compare annotation with two annotation tools that differ in their approach and operation.
 
 [Helixer](https://github.com/weberlab-hhu/Helixer) is an annotation software with a new and different approach: it performs evidence-free predictions (no need for RNASeq data or sequence alignments), using {GPU}, with a much faster execution time. The annotation is based on the development and use of a cross-species deep learning model. The software is used to configure and train models for *ab initio* prediction of gene structure. In other words, it identifies the base pairs in a genome that belong to the UTR/CDS/Intron genes.
-There's a tutorial describing the steps involved in [annotating a genome with Helixer]({% link topics/assembly/tutorials/genome-annotation/helixer/tutorial.md %}). 
+There's a tutorial describing the steps involved in [annotating a genome with Helixer]({% link topics/topics/genome-annotation/tutorials/helixer/tutorial.md %}). 
 
 [Braker3](https://github.com/Gaius-Augustus/BRAKER) is an automated bioinformatics tool that uses RNA-seq and protein data to annotate genomes. It integrates GeneMark-ETP and AUGUSTUS software to predict genes with a high degree of precision. By combining the results of these two tools, Braker3 generates a final file containing gene annotations with strong extrinsic support (i.e. based on external experimental data). Braker3 facilitates genome annotation by leveraging transcriptomic and protein data to produce more reliable and robust gene predictions.
-There's a tutorial describing the steps involved in [annotating a genome with Braker3]({% link topics/assembly/tutorials/genome-annotation/braker3/tutorial.md %}). 
+There's a tutorial describing the steps involved in [annotating a genome with Braker3]({% link topics/topics/genome-annotation/tutorials/braker3/tutorial.md %}). 
 
 > <agenda-title></agenda-title>
 >
