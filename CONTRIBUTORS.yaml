@@ -777,6 +777,10 @@ elichad:
     orcid: 0000-0002-0035-6475
     joined: 2022-11
 
+elischberg:
+    name: Elischa Berger
+    joined: 2024-03
+
 edmontosaurus:
     name: Edwin den Haas
     matrix: 'edmontosaurus:matrix.org'
@@ -2769,6 +2773,10 @@ valentinmarcon:
 vdda:
     name: Victoria Dominguez del Angel
     joined: 2017-09
+
+VerenaMoo:
+    name: Verena Moosmann
+    joined: 2024-12
 
 vivekbhr:
     name: Vivek Bhardwaj
