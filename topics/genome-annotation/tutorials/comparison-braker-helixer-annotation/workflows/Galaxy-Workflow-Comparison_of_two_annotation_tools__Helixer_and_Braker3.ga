@@ -928,7 +928,13 @@
             ]
         }
     },
-    "tags": [],
+    "tags": [
+        "braker3",
+        "helixer",
+        "genomeannotation",
+        "busco",
+        "jbrowse"
+    ],
     "uuid": "f8ba0751-09c5-4611-b4b8-6827a44cd7c7",
     "version": 1
 }
