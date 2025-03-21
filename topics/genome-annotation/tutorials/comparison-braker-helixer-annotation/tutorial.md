@@ -83,6 +83,11 @@ Unlike Helixer, **Braker3** needs two other files:
 - Some **RNAseq data** in bam format. These reads are already aligned on the genome, and Braker3 will use it as evidences to annotate genes.
 - A set of **protein sequences**, like UniProt/SwissProt. It is important to have good quality, curated sequences here, and the UniProt/SwissProt databank fits very well. 
 
+Galaxy uses Job Cache to avoid recalculating identical analyses. If a tool has already been run with the same parameters and inputs, previous results are reused, reducing waiting time and resource consumption.
+
+> {% snippet  faqs/galaxy/re_use_equivalent_jobs.md %}
+
+
 > <hands-on-title>Data upload</hands-on-title>
 >
 > 1. Create a new history for this tutorial
