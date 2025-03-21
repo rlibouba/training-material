@@ -1124,9 +1124,9 @@ hmenager:
 hrhotz:
     name: Hans-Rudolf Hotz
     email: hrhotz@googlemail.com
-    twitter: hrhotz
     fediverse: https://genomic.social/@hrhotz
     fediverse_flavor: mastodon
+    bluesky: hrhotz.bsky.social
     matrix: 'hrhotz:matrix.org'
     orcid: 0000-0002-2799-424X
     linkedin: hans-rudolf-hotz-542b31
@@ -1135,8 +1135,8 @@ hrhotz:
     contact_for_training: true
     location:
       country: CH
-      lat: 47.57
-      lon: 7.60
+      lat: 47.575694 
+      lon: 7.578796
     affiliations:
       - elixir-europe
 
@@ -1435,6 +1435,7 @@ kostrykin:
     elixir_node: de
     twitter: l_kostrykin
     linkedin: kostrykin
+    bluesky: kostrykin.bsky.social
     affiliations:
       - elixir-europe
       - deNBI
@@ -2834,7 +2835,7 @@ wm75:
     matrix: 'wm75:matrix.org'
     joined: 2017-09
     elixir_node: de
-    fediverse: https://scholar.social/@zerodivision
+    fediverse: https://fediscience.org/@zerodivision
     fediverse_flavor: mastodon
     affiliations:
       - by-covid
