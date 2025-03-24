@@ -459,6 +459,10 @@ burkemlou:
     affiliations:
         - AustralianBioCommons
 
+bwalkowi:
+    name: Bartosz Walkowicz
+    joined: 2025-03
+
 B0r1sD:
     name: Boris Depoortere
     joined: 2024-04
@@ -1544,6 +1548,11 @@ lleroi:
     email: laura.leroi@ifremer.fr
     orcid: 0000-0003-3748-4179
     joined: 2021-11
+
+lopiola:
+    name: Łukasz Opioła
+    joined: 2025-03
+    orcid: 0000-0003-1997-932X
 
 LonsBio:
     name: Andrew Lonsdale
