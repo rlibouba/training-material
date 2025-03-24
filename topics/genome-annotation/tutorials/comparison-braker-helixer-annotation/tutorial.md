@@ -85,8 +85,11 @@ Unlike Helixer, **Braker3** needs two other files:
 
 Galaxy uses Job Cache to avoid recalculating identical analyses. If a tool has already been run with the same parameters and inputs, previous results are reused, reducing waiting time and resource consumption.
 
-> {% snippet  faqs/galaxy/re_use_equivalent_jobs.md %}
-
+> <hands-on-title>Using Job cache</hands-on-title>
+>
+> {% snippet faqs/galaxy/re_use_equivalent_jobs.md %}
+>
+{: .hands_on}
 
 > <hands-on-title>Data upload</hands-on-title>
 >
