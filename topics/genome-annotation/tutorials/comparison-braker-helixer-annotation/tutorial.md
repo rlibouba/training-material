@@ -19,12 +19,12 @@ questions:
     - How to annotate an eukaryotic genome with Braker3?
     - How to annotate an eukaryotic genome with Helixer?
     - How to evaluate and visualize annotated genomic features?
-    - Compare the annotation of two annotation tools
 
 objectives:
     - Load genome into Galaxy
-    - Annotate genome with Braker3
-    - Evaluate annotation quality with BUSCO
+    - Annotate genome with Braker3 and Helixer
+    - Evaluate annotations quality with BUSCO
+    - Compare the annotation of two annotation tools
     - View annotations in JBrowse
 
 time_estimation: 8h
@@ -58,10 +58,10 @@ Annotating the eukaryotic genome represents a somewhat more complex challenge th
 In this tutorial, we will use two software tools, Helixer and Braker3, to annotate the genome sequence of a small eukaryote: [*Mucor mucedo*] (https://en.wikipedia.org/wiki/Mucor_mucedo) (a plant pathogenic fungus).
 The idea of this tutorial is to compare annotation with two annotation tools that differ in their approach and operation.
 
-[Helixer](https://github.com/weberlab-hhu/Helixer) is an annotation software with a new and different approach: it performs evidence-free predictions (no need for RNASeq data or sequence alignments), using {GPU}, with a much faster execution time. The annotation is based on the development and use of a cross-species deep learning model. The software is used to configure and train models for *ab initio* prediction of gene structure. In other words, it identifies the base pairs in a genome that belong to the UTR/CDS/Intron genes.
+[Helixer](https://github.com/weberlab-hhu/Helixer) is an annotation software with a new and different approach: it performs evidence-free predictions (no need for RNA-seq data or sequence alignments), using {GPU}, with a much faster execution time. The annotation is based on the development and use of a cross-species deep learning model. The software is used to configure and train models for *ab initio* prediction of gene structure. In other words, it identifies the base pairs in a genome that belong to the UTR/CDS/Intron genes.
 There's a tutorial describing the steps involved in [annotating a genome with Helixer]({% link topics/genome-annotation/tutorials/helixer/tutorial.md %}). 
 
-[Braker3](https://github.com/Gaius-Augustus/BRAKER) is an automated bioinformatics tool that uses RNA-seq and protein data to annotate genomes. It integrates GeneMark-ETP and AUGUSTUS software to predict genes with a high degree of precision. By combining the results of these two tools, Braker3 generates a final file containing gene annotations with strong extrinsic support (i.e. based on external experimental data). Braker3 facilitates genome annotation by leveraging transcriptomic and protein data to produce more reliable and robust gene predictions.
+[Braker3](https://github.com/Gaius-Augustus/BRAKER) is an automated bioinformatics tool that uses RNA-seq and protein sequences to annotate genome. It integrates GeneMark-ETP and AUGUSTUS software to predict genes with a high degree of precision. By combining the results of these two tools, Braker3 generates a final file containing gene annotations with strong extrinsic support (i.e. based on external experimental data). Braker3 facilitates genome annotation by leveraging transcriptomic and protein sequences to produce more reliable and robust gene predictions.
 There's a tutorial describing the steps involved in [annotating a genome with Braker3]({% link topics/genome-annotation/tutorials/braker3/tutorial.md %}). 
 
 > <agenda-title></agenda-title>
@@ -116,18 +116,18 @@ Galaxy uses Job Cache to avoid recalculating identical analyses. If a tool has a
 # Preparing RNAseq data for Braker3 annotation
 
 In this tutorial, the alignments from RNA-seq are already prepared.
-This data was obtained using the RNA STAR tool, as explained in detail in the [Funannotate]({% link topics/genome-annotation/tutorials/funannotate/tutorial.md %}) tutorial.
+This data was obtained using the **RNA STAR** tool, as explained in detail in the [Braker3]({% link topics/genome-annotation/tutorials/braker3/tutorial.md %}) tutorial.
 
-Note that when using Braker3 with STAR to align RNA-Seq data, the **--outSAMstrandField intronMotif** parameter must be added.
-This parameter adds specific intron information to the alignment files (BAM).
+Note that when using Braker3 with RNA STAR to align RNA-seq data, the **--outSAMstrandField intronMotif** parameter must be added.
+This parameter adds specific intron information to the alignment file (BAM).
 This information is necessary for Braker3 to correctly understand and use the alignments to annotate genes.
 Without this parameter, Braker3 may not function correctly or may produce incomplete results.
 
-Here's how to run STAR with this specific parameter (**"Read alignement tags to include in the BAM output"** option), before annotating with Braker3:
+Here's how to run RNA STAR with this specific parameter (**"Read alignement tags to include in the BAM output"** option), before annotating with Braker3:
 
 > <hands-on-title></hands-on-title>
 >
-> 1. {% tool [RNA STAR](toolshed.g2.bx.psu.edu/repos/iuc/rgrnastar/rna_star/2.7.8a+galaxy0) %} with the following parameters:
+> 1. {% tool [RNA STAR](toolshed.g2.bx.psu.edu/repos/iuc/rgrnastar/rna_star/2.7.11a+galaxy1) %} with the following parameters:
 >    - *"Single-end or paired-end reads"*: `Paired-end (as individual datasets)`
 >        - {% icon param-file %} *"RNA-Seq FASTQ/FASTA file, forward reads"*: `rnaseq_R1.fq.gz` (Input dataset)
 >        - {% icon param-file %} *"RNA-Seq FASTQ/FASTA file, reverse reads"*: `rnaseq_R2.fq.gz` (Input dataset)
@@ -151,7 +151,7 @@ We also need to choose between 4 different lineages: *invertebrate*, *vertebrate
 As an option, we can also enter a species name.
 
 
-> <hands-on-title></hands-on-title>
+> <hands-on-title>Genome annotation with Helixer</hands-on-title>
 >
 > 1. {% tool [Helixer](toolshed.g2.bx.psu.edu/repos/genouest/helixer/helixer/0.3.3+galaxy1) %} with the following parameters:
 >    - {% icon param-file %} *"Genomic sequence"*: `genome_masked.fasta` (Input dataset)
@@ -216,8 +216,6 @@ With these files, we can run [**Braker3**](https://github.com/Gaius-Augustus/BRA
 Braker3 generates an output file in GTF format by default. But it is possible to generate the output file in GFF3 output. This file contains informations on gene locations, exons, introns, etc.
 GFF3 files are generally preferred for complex and varied annotations, while GTF is often used for transcript annotations in RNA-seq studies.
 
-The GFF3 format is a standard bioinformatics format for storing genome annotations. Each row describes a genomic entity, with columns detailing its identifier, location, score and other attributes.
-
 If you can't wait to have the Braker3 annotation and move on to the comparison step between our two annotation tools, we invite you to import the Braker3 annotation:
 
 > <hands-on-title>Data upload</hands-on-title>
@@ -239,8 +237,7 @@ If you can't wait to have the Braker3 annotation and move on to the comparison s
 # Quality evaluation
 ## Evaluation with **Busco**
 
-[BUSCO](http://busco.ezlab.org/) (Benchmarking Universal Single-Copy Orthologs) is a widely used tool to evaluate the quality of a genome assembly and annotation. By comparing genomes from
-various related and distantly related species, the authors determined sets of ortholog genes that are present in single copy in (almost) all the species of a clade (Bacteria, Fungi, Plants, Insects, Mammalians, …).
+[BUSCO](http://busco.ezlab.org/) (Benchmarking Universal Single-Copy Orthologs) is a widely used tool to evaluate the quality of a genome assembly and annotation. By comparing genomes from various related and distantly related species, the authors determined sets of ortholog genes that are present in single copy in (almost) all the species of a clade (Bacteria, Fungi, Plants, Insects, Mammalians, …).
 Most of these genes are essential for the organism to live, and are expected to be found in any newly sequenced and annotated genome from the corresponding clade. Using this data, BUSCO evaluates the "completeness" of genome annotation by assessing the proportion of these essential genes (also named BUSCOs) found in a set of (predicted) transcript or protein sequences.
 
 ### Braker3 annotation
@@ -283,7 +280,7 @@ Several output files are generated:
 - summary image: graphics and visualizations to visually represent the results of the evaluation, such as bar charts showing the proportion of complete, partial and missing genes.
 - GFF: contain information on gene locations, exons, introns, etc.
 
-This gives information about the completeness of the Braker3 annotation. A good idea is to compare this first result with the one you get on the initial genome sequence,and see if the annotation tool found all the genes that BUSCO finds in the raw genome sequence.
+This gives information about the completeness of the Braker3 annotation. A good idea is to compare this first result with the one you get on the initial genome sequence, and see if the annotation tool found all the genes that BUSCO finds in the raw genome sequence. To do this, you can restart BUSCO on the masked genome with the same parameters, but selecting the **Genome assemblies (DNA)** mode.
 
 
 > <comment-title>What can we deduce from these results?</comment-title>
@@ -310,7 +307,7 @@ We are going to do the same thing again, but with the Helixer annotation. The fi
 >
 {: .hands_on}
 
-To run BUSCO on these protein sequences:
+To run BUSCO on these protein sequences predicted by Helixer annotation:
 
 > <hands-on-title>BUSCO in proteome mode</hands-on-title>
 >
@@ -336,7 +333,7 @@ To run BUSCO on these protein sequences:
 
 Braker3 identifies 94.4% complete genes, while Helixer detects 94.6%. Helixer therefore finds slightly more complete genes.
 
-As for duplications, Braker3 produces 7.6%, compared with only 1.3% for Helixer. Helixer's annotation is therefore more precise, with fewer redundant copies.
+As for duplications, Braker3 detects 7.6%, compared with only 1.3% for Helixer. Helixer's annotation is therefore more precise, with fewer redundant copies.
 
 These differences can be explained by the methods used by each tool to annotate genes.
 - BRAKER3 uses an approach based on biological evidence, combining RNA-Seq data and protein alignments. This enables it to identify genes with good accuracy, but can also lead to duplications if several isoforms are poorly distinguished.
@@ -445,3 +442,6 @@ Helixer also detects a larger number of genes. OMArk analysis showed a higher qu
 
 Congratulations on reaching the end of this tutorial! You now know how to perform a structural annotation of a new eukaryotic genome, using Helixer and Braker3. And you've learned how to evaluate its quality and how to visualize it using JBrowse.
 
+Through this comparative analysis, you've seen that both annotation tools have their strengths:
+* Helixer offers a high level of gene completeness and avoids redundant duplications thanks to its deep learning-based approach. It's particularly effective when a consistent, duplication-free prediction is preferred.
+* Braker3, leveraging RNA-Seq and protein evidence, delivers more biologically grounded annotations, with a better match to known gene families, making it a solid choice when biological accuracy and interpretability are key.
