@@ -4,6 +4,27 @@
     "comments": [
         {
             "child_steps": [
+                3,
+                0,
+                1
+            ],
+            "color": "red",
+            "data": {
+                "title": "First Maker annotation round"
+            },
+            "id": 0,
+            "position": [
+                150,
+                100
+            ],
+            "size": [
+                570,
+                812.9
+            ],
+            "type": "frame"
+        },
+        {
+            "child_steps": [
                 6,
                 7,
                 10
@@ -25,164 +46,21 @@
         },
         {
             "child_steps": [
-                1,
-                3,
-                0
-            ],
-            "color": "red",
-            "data": {
-                "title": "First Maker annotation round"
-            },
-            "id": 0,
-            "position": [
-                150,
-                100
-            ],
-            "size": [
-                570,
-                812.9
-            ],
-            "type": "frame"
-        },
-        {
-            "child_steps": [
-                8,
-                9
-            ],
-            "color": "orange",
-            "data": {
-                "title": "Ab-initio predictors first training"
-            },
-            "id": 6,
-            "position": [
-                1800,
-                1260
-            ],
-            "size": [
-                270,
-                413.7
-            ],
-            "type": "frame"
-        },
-        {
-            "child_steps": [
-                12,
-                13
-            ],
-            "color": "orange",
-            "data": {
-                "title": "Ab-initio predictors second training"
-            },
-            "id": 4,
-            "position": [
-                2130,
-                40
-            ],
-            "size": [
-                310,
-                464.8
-            ],
-            "type": "frame"
-        },
-        {
-            "child_steps": [
-                22
-            ],
-            "color": "pink",
-            "data": {
-                "title": "Visualising the results"
-            },
-            "id": 10,
-            "position": [
-                3630,
-                980
-            ],
-            "size": [
-                240,
-                600
-            ],
-            "type": "frame"
-        },
-        {
-            "child_steps": [
-                20
-            ],
-            "color": "blue",
-            "data": {
-                "title": "Improving gene naming"
-            },
-            "id": 9,
-            "position": [
-                3300,
-                640
-            ],
-            "size": [
-                240,
-                270
-            ],
-            "type": "frame"
-        },
-        {
-            "child_steps": [
-                14,
-                15,
-                17
+                5,
+                4
             ],
             "color": "lime",
             "data": {
-                "title": "Annotation statistics on the second annotation"
+                "title": "Genome quality evaluation"
             },
-            "id": 8,
+            "id": 2,
             "position": [
-                2470,
-                2140
-            ],
-            "size": [
-                760,
-                377.2
-            ],
-            "type": "frame"
-        },
-        {
-            "child_steps": [
-                21,
-                18,
-                19
-            ],
-            "color": "lime",
-            "data": {
-                "title": "Annotation statistics on the final annotation"
-            },
-            "id": 7,
-            "position": [
-                3000,
-                170
-            ],
-            "size": [
-                800,
-                386.4
-            ],
-            "type": "frame"
-        },
-        {
-            "child_comments": [
-                6
-            ],
-            "child_steps": [
-                11
-            ],
-            "color": "red",
-            "data": {
-                "title": "Second Maker annotation round"
-            },
-            "id": 5,
-            "position": [
-                1780,
-                1220
-            ],
-            "size": [
                 580,
-                873.7
+                1730
+            ],
+            "size": [
+                500,
+                315.3
             ],
             "type": "frame"
         },
@@ -209,22 +87,144 @@
             "type": "frame"
         },
         {
+            "child_comments": [
+                6
+            ],
             "child_steps": [
-                4,
-                5
+                11
+            ],
+            "color": "red",
+            "data": {
+                "title": "Second Maker annotation round"
+            },
+            "id": 5,
+            "position": [
+                1780,
+                1220
+            ],
+            "size": [
+                580,
+                873.7
+            ],
+            "type": "frame"
+        },
+        {
+            "child_steps": [
+                18,
+                19,
+                21
             ],
             "color": "lime",
             "data": {
-                "title": "Genome quality evaluation"
+                "title": "Annotation statistics on the final annotation"
             },
-            "id": 2,
+            "id": 7,
             "position": [
-                580,
-                1730
+                3000,
+                170
             ],
             "size": [
-                500,
-                315.3
+                800,
+                386.4
+            ],
+            "type": "frame"
+        },
+        {
+            "child_steps": [
+                14,
+                15,
+                17
+            ],
+            "color": "lime",
+            "data": {
+                "title": "Annotation statistics on the second annotation"
+            },
+            "id": 8,
+            "position": [
+                2470,
+                2140
+            ],
+            "size": [
+                760,
+                377.2
+            ],
+            "type": "frame"
+        },
+        {
+            "child_steps": [
+                20
+            ],
+            "color": "blue",
+            "data": {
+                "title": "Improving gene naming"
+            },
+            "id": 9,
+            "position": [
+                3300,
+                640
+            ],
+            "size": [
+                240,
+                270
+            ],
+            "type": "frame"
+        },
+        {
+            "child_steps": [
+                22
+            ],
+            "color": "pink",
+            "data": {
+                "title": "Visualising the results"
+            },
+            "id": 10,
+            "position": [
+                3630,
+                980
+            ],
+            "size": [
+                240,
+                600
+            ],
+            "type": "frame"
+        },
+        {
+            "child_steps": [
+                12,
+                13
+            ],
+            "color": "orange",
+            "data": {
+                "title": "Ab-initio predictors second training"
+            },
+            "id": 4,
+            "position": [
+                2130,
+                40
+            ],
+            "size": [
+                310,
+                464.8
+            ],
+            "type": "frame"
+        },
+        {
+            "child_steps": [
+                8,
+                9
+            ],
+            "color": "orange",
+            "data": {
+                "title": "Ab-initio predictors first training"
+            },
+            "id": 6,
+            "position": [
+                1800,
+                1260
+            ],
+            "size": [
+                270,
+                413.7
             ],
             "type": "frame"
         }
@@ -247,7 +247,7 @@
     ],
     "format-version": "0.1",
     "license": "GPL-3.0-or-later",
-    "name": "Genome annotation with Maker (update)",
+    "name": "Genome annotation with Maker",
     "readme": "This workflow is used for the GTN \u201cGenome annotation with Maker\u201d (https://training.galaxyproject.org/training-material/topics/genome-annotation/tutorials/annotation-with-maker/tutorial.html).\n\n\nMaker is a tool for annotating genomic sequences. In this tutorial, you will learn how to annotate a genome and assess its quality, while discovering the importance of training ab initio predictors to achieve optimal results.",
     "report": {
         "markdown": "\n# Workflow Execution Report\n\n## Workflow Inputs\n```galaxy\ninvocation_inputs()\n```\n\n## Workflow Outputs\n```galaxy\ninvocation_outputs()\n```\n\n## Workflow\n```galaxy\nworkflow_display()\n```\n"
@@ -451,11 +451,6 @@
             "when": null,
             "workflow_outputs": [
                 {
-                    "label": "Maker first annotation evidences",
-                    "output_name": "output_evidences",
-                    "uuid": "35d8f583-1e54-4e23-990d-73a9c62f7e95"
-                },
-                {
                     "label": "Maker first annotation full",
                     "output_name": "output_full",
                     "uuid": "af487daa-7d2a-44a4-b9e1-a81b0f4cae8b"
@@ -464,6 +459,11 @@
                     "label": "Maker first annotation gff",
                     "output_name": "output_gff",
                     "uuid": "e6e1e1a9-e1c3-4c5d-be03-6fb8e11b1074"
+                },
+                {
+                    "label": "Maker first annotation evidences",
+                    "output_name": "output_evidences",
+                    "uuid": "35d8f583-1e54-4e23-990d-73a9c62f7e95"
                 }
             ]
         },
@@ -520,14 +520,14 @@
                     "uuid": "a15e1214-23a2-484b-9c75-1635fcd61fe3"
                 },
                 {
-                    "label": "BUSCO: list of missing ortholog genes",
-                    "output_name": "busco_missing",
-                    "uuid": "6d550a6b-c345-40f3-8cb8-714aaf136f79"
-                },
-                {
                     "label": "BUSCO: full table",
                     "output_name": "busco_table",
                     "uuid": "6a27d0f6-d83c-42b1-a7af-5f99ba5debe2"
+                },
+                {
+                    "label": "BUSCO: list of missing ortholog genes",
+                    "output_name": "busco_missing",
+                    "uuid": "6d550a6b-c345-40f3-8cb8-714aaf136f79"
                 }
             ]
         },
@@ -630,14 +630,14 @@
             "when": null,
             "workflow_outputs": [
                 {
-                    "label": "Genome annotation statistics: graphs (first round)",
-                    "output_name": "graphs",
-                    "uuid": "2bed9aa6-5f22-494d-9caa-f0ece8464f15"
-                },
-                {
                     "label": "Genome annotation statistics: summary (first round)",
                     "output_name": "summary",
                     "uuid": "71d41ce2-e90d-435b-9b64-ab4320524770"
+                },
+                {
+                    "label": "Genome annotation statistics: graphs (first round)",
+                    "output_name": "graphs",
+                    "uuid": "2bed9aa6-5f22-494d-9caa-f0ece8464f15"
                 }
             ]
         },
@@ -678,13 +678,7 @@
                 "left": 1250,
                 "top": 370
             },
-            "post_job_actions": {
-                "HideDatasetActionoutput_exons": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
-                    "output_name": "output_exons"
-                }
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/gffread/gffread/2.2.1.4+galaxy0",
             "tool_shed_repository": {
                 "changeset_revision": "3e436657dcd0",
@@ -734,13 +728,7 @@
                 "left": 1820,
                 "top": 1300
             },
-            "post_job_actions": {
-                "HideDatasetActionoutput": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
-                    "output_name": "output"
-                }
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/snap_training/snap_training/2013_11_29+galaxy1",
             "tool_shed_repository": {
                 "changeset_revision": "2a598c0aa042",
@@ -754,17 +742,11 @@
             "type": "tool",
             "uuid": "80a63f9b-4e34-4853-bc59-eb346c5402b7",
             "when": null,
-            "workflow_outputs": [
-                {
-                    "label": "output",
-                    "output_name": "output",
-                    "uuid": "53ca7d90-2519-4712-8113-7d660f2dcee5"
-                }
-            ]
+            "workflow_outputs": []
         },
         "9": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/augustus_training/augustus_training/3.3.3",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/augustus_training/augustus_training/3.5.0+galaxy0",
             "errors": null,
             "id": 9,
             "input_connections": {
@@ -790,33 +772,21 @@
                 "left": 1850,
                 "top": 1490
             },
-            "post_job_actions": {
-                "HideDatasetActionoutput_tar": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
-                    "output_name": "output_tar"
-                }
-            },
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/augustus_training/augustus_training/3.3.3",
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/augustus_training/augustus_training/3.5.0+galaxy0",
             "tool_shed_repository": {
-                "changeset_revision": "6519ebe25019",
+                "changeset_revision": "2fdc599f2814",
                 "name": "augustus_training",
                 "owner": "bgruening",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"genome\": {\"__class__\": \"ConnectedValue\"}, \"maker_gff\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_state": "{\"genome\": {\"__class__\": \"ConnectedValue\"}, \"maker_gff\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
             "tool_uuid": null,
-            "tool_version": "3.3.3",
+            "tool_version": "3.5.0+galaxy0",
             "type": "tool",
             "uuid": "6dfb4b6a-0397-41a7-9b24-f490190ebf6e",
             "when": null,
-            "workflow_outputs": [
-                {
-                    "label": "output_tar",
-                    "output_name": "output_tar",
-                    "uuid": "995d20f3-c367-4bc3-b077-818bf5732691"
-                }
-            ]
+            "workflow_outputs": []
         },
         "10": {
             "annotation": "",
@@ -851,11 +821,6 @@
                     "action_arguments": {},
                     "action_type": "HideDatasetAction",
                     "output_name": "busco_missing"
-                },
-                "HideDatasetActionbusco_table": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
-                    "output_name": "busco_table"
                 }
             },
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/5.8.0+galaxy2",
@@ -873,14 +838,14 @@
             "when": null,
             "workflow_outputs": [
                 {
-                    "label": "Busco summary first round",
-                    "output_name": "busco_sum",
-                    "uuid": "a79ab19d-9802-42ca-8ffa-8c197a16c8b8"
-                },
-                {
                     "label": "Busco table first round",
                     "output_name": "busco_table",
                     "uuid": "8ddfc6a4-7410-4a23-9337-f595c4bf1731"
+                },
+                {
+                    "label": "Busco summary first round",
+                    "output_name": "busco_sum",
+                    "uuid": "a79ab19d-9802-42ca-8ffa-8c197a16c8b8"
                 }
             ]
         },
@@ -1009,6 +974,11 @@
             "when": null,
             "workflow_outputs": [
                 {
+                    "label": "Maker second annotation evidences",
+                    "output_name": "output_evidences",
+                    "uuid": "4639ebca-9c40-4ee7-b9d0-c504e7e069a0"
+                },
+                {
                     "label": "Maker second annotation gff",
                     "output_name": "output_gff",
                     "uuid": "5d62ccce-abf8-41fc-8067-6fbe13c08d35"
@@ -1017,11 +987,6 @@
                     "label": "Maker second annotation full",
                     "output_name": "output_full",
                     "uuid": "0f6a9bd7-3336-4625-adbf-a4001c6ce54f"
-                },
-                {
-                    "label": "Maker second annotation evidences",
-                    "output_name": "output_evidences",
-                    "uuid": "4639ebca-9c40-4ee7-b9d0-c504e7e069a0"
                 }
             ]
         },
@@ -1067,13 +1032,7 @@
             "type": "tool",
             "uuid": "97cec0ac-e731-4b55-859d-773a7c88bc26",
             "when": null,
-            "workflow_outputs": [
-                {
-                    "label": "SNAP: trained model",
-                    "output_name": "output",
-                    "uuid": "458887f7-0661-4bde-ab1a-875aac6caed8"
-                }
-            ]
+            "workflow_outputs": []
         },
         "13": {
             "annotation": "",
@@ -1117,13 +1076,7 @@
             "type": "tool",
             "uuid": "b347da09-05a2-4d30-a103-dbeb5853efcd",
             "when": null,
-            "workflow_outputs": [
-                {
-                    "label": "Augus: trained model",
-                    "output_name": "output_tar",
-                    "uuid": "42d5aadd-3a8c-441d-913f-ee8745a99b0b"
-                }
-            ]
+            "workflow_outputs": []
         },
         "14": {
             "annotation": "",
@@ -1178,14 +1131,14 @@
             "when": null,
             "workflow_outputs": [
                 {
-                    "label": "Genome annotation statistics: summary (second round)",
-                    "output_name": "summary",
-                    "uuid": "61f7a150-a4a2-46b1-89f5-2170d466656e"
-                },
-                {
                     "label": "Genome annotation statistics: graphs (second round)",
                     "output_name": "graphs",
                     "uuid": "9def2c6e-fd3c-4969-b5d4-d13c187c1144"
+                },
+                {
+                    "label": "Genome annotation statistics: summary (second round)",
+                    "output_name": "summary",
+                    "uuid": "61f7a150-a4a2-46b1-89f5-2170d466656e"
                 }
             ]
         },
@@ -1347,23 +1300,7 @@
                 "left": 2520,
                 "top": 60
             },
-            "post_job_actions": {
-                "HideDatasetActionoutput_evidences": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
-                    "output_name": "output_evidences"
-                },
-                "HideDatasetActionoutput_full": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
-                    "output_name": "output_full"
-                },
-                "HideDatasetActionoutput_gff": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
-                    "output_name": "output_gff"
-                }
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/maker/maker/2.31.11+galaxy2",
             "tool_shed_repository": {
                 "changeset_revision": "370c210d9541",
@@ -1379,11 +1316,6 @@
             "when": null,
             "workflow_outputs": [
                 {
-                    "label": "Maker last annotation evidences",
-                    "output_name": "output_evidences",
-                    "uuid": "02894a86-529e-4762-97e3-1778524a1d15"
-                },
-                {
                     "label": "Maker last annotation full",
                     "output_name": "output_full",
                     "uuid": "e682040e-e59d-468d-9240-f45285e9be6c"
@@ -1392,6 +1324,11 @@
                     "label": "Maker last annotation gff",
                     "output_name": "output_gff",
                     "uuid": "8f273e8f-27a5-4518-ac09-b2e2b01e2f17"
+                },
+                {
+                    "label": "Maker last annotation evidences",
+                    "output_name": "output_evidences",
+                    "uuid": "02894a86-529e-4762-97e3-1778524a1d15"
                 }
             ]
         },
@@ -1514,11 +1451,6 @@
             "when": null,
             "workflow_outputs": [
                 {
-                    "label": "Genome annotation statistics: graphs (third round)",
-                    "output_name": "graphs",
-                    "uuid": "f5d4a6bf-1ff8-435a-8084-7921e25bff3a"
-                },
-                {
                     "label": "Genome annotation statistics: summary (third round)",
                     "output_name": "summary",
                     "uuid": "5a863bd4-10f2-4ac8-81b6-ce8b7f663e42"
@@ -1586,16 +1518,6 @@
             "when": null,
             "workflow_outputs": [
                 {
-                    "label": "Gffread: translation of cds",
-                    "output_name": "output_pep",
-                    "uuid": "5c47c25e-0ddb-4ade-a5d0-873ff4add28c"
-                },
-                {
-                    "label": "Gffread: cds",
-                    "output_name": "output_cds",
-                    "uuid": "84d9183b-9589-464b-9f82-4dae7f87133e"
-                },
-                {
                     "label": "Gffread: exons",
                     "output_name": "output_exons",
                     "uuid": "52fcac23-b612-4377-a19a-2e3b667a23e3"
@@ -1637,11 +1559,6 @@
                     },
                     "action_type": "ChangeDatatypeAction",
                     "output_name": "renamed"
-                },
-                "HideDatasetActionid_map": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
-                    "output_name": "id_map"
                 }
             },
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/maker_map_ids/maker_map_ids/2.31.11",
@@ -1698,11 +1615,6 @@
                     "action_arguments": {},
                     "action_type": "HideDatasetAction",
                     "output_name": "busco_missing"
-                },
-                "HideDatasetActionbusco_table": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
-                    "output_name": "busco_table"
                 }
             },
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/5.8.0+galaxy2",
@@ -1720,14 +1632,14 @@
             "when": null,
             "workflow_outputs": [
                 {
-                    "label": "Busco summary final round",
-                    "output_name": "busco_sum",
-                    "uuid": "0bc78676-eecc-4168-894d-34c4ca07cdf3"
-                },
-                {
                     "label": "Busco table final round",
                     "output_name": "busco_table",
                     "uuid": "07508621-9b4e-4683-aad9-aca3bf6f24bb"
+                },
+                {
+                    "label": "Busco summary final round",
+                    "output_name": "busco_sum",
+                    "uuid": "0bc78676-eecc-4168-894d-34c4ca07cdf3"
                 }
             ]
         },
@@ -1809,6 +1721,6 @@
     "tags": [
         "genome-annotation"
     ],
-    "uuid": "4e9b42a2-5d27-41fa-871e-91b0f4570f73",
-    "version": 11
+    "uuid": "f7540025-ecb3-4103-b2b8-44b3b7f53800",
+    "version": 15
 }

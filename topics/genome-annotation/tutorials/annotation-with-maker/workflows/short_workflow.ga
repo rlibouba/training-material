@@ -23,22 +23,21 @@
         },
         {
             "child_steps": [
-                11,
-                8,
-                9
+                5,
+                6
             ],
             "color": "lime",
             "data": {
-                "title": "Annotation statistics"
+                "title": "Genome quality evaluation"
             },
-            "id": 2,
+            "id": 0,
             "position": [
-                1020,
-                130
+                340,
+                0
             ],
             "size": [
-                780,
-                280
+                510,
+                265.2
             ],
             "type": "frame"
         },
@@ -67,21 +66,22 @@
         },
         {
             "child_steps": [
-                5,
-                6
+                8,
+                11,
+                9
             ],
             "color": "lime",
             "data": {
-                "title": "Genome quality evaluation"
+                "title": "Annotation statistics"
             },
-            "id": 0,
+            "id": 2,
             "position": [
-                340,
-                0
+                1020,
+                130
             ],
             "size": [
-                510,
-                265.2
+                780,
+                280
             ],
             "type": "frame"
         },
@@ -114,7 +114,7 @@
     ],
     "format-version": "0.1",
     "license": "GPL-3.0-or-later",
-    "name": "Genome annotation with Maker (short) (update)",
+    "name": "Genome annotation with Maker (short)",
     "readme": "This workflow is used for the GTN \u201cGenome annotation with Maker (short)\u201d (https://training.galaxyproject.org/training-material/topics/genome-annotation/tutorials/annotation-with-maker-short/tutorial.html).\n\n\nMaker is a tool for annotating genomic sequences. In this tutorial, you will learn how to annotate a genome and assess its quality..",
     "report": {
         "markdown": "\n# Workflow Execution Report\n\n## Workflow Inputs\n```galaxy\ninvocation_inputs()\n```\n\n## Workflow Outputs\n```galaxy\ninvocation_outputs()\n```\n\n## Workflow\n```galaxy\nworkflow_display()\n```\n"
@@ -449,23 +449,7 @@
                 "left": 387.9833068847656,
                 "top": 630
             },
-            "post_job_actions": {
-                "HideDatasetActionoutput_evidences": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
-                    "output_name": "output_evidences"
-                },
-                "HideDatasetActionoutput_full": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
-                    "output_name": "output_full"
-                },
-                "HideDatasetActionoutput_gff": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
-                    "output_name": "output_gff"
-                }
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/maker/maker/2.31.11+galaxy2",
             "tool_shed_repository": {
                 "changeset_revision": "370c210d9541",
@@ -548,7 +532,18 @@
             "type": "tool",
             "uuid": "14236032-ec57-4beb-ab0a-e44bf845643c",
             "when": null,
-            "workflow_outputs": []
+            "workflow_outputs": [
+                {
+                    "label": "summary",
+                    "output_name": "summary",
+                    "uuid": "515ac0ee-3832-4a4c-85ea-a8d369683a39"
+                },
+                {
+                    "label": "graphs",
+                    "output_name": "graphs",
+                    "uuid": "24ec6c56-7c8a-4b30-bc3a-48ceb33da852"
+                }
+            ]
         },
         "9": {
             "annotation": "",
@@ -693,11 +688,6 @@
                     "action_arguments": {},
                     "action_type": "HideDatasetAction",
                     "output_name": "busco_missing"
-                },
-                "HideDatasetActionbusco_table": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
-                    "output_name": "busco_table"
                 }
             },
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/5.8.0+galaxy2",
@@ -715,14 +705,14 @@
             "when": null,
             "workflow_outputs": [
                 {
-                    "label": "Busco summary final round",
-                    "output_name": "busco_sum",
-                    "uuid": "6951417b-ee0b-4e03-98e4-67d262e086dc"
-                },
-                {
                     "label": "Busco table final round",
                     "output_name": "busco_table",
                     "uuid": "9ca68e16-120a-45c0-b255-d789296a38cc"
+                },
+                {
+                    "label": "Busco summary final round",
+                    "output_name": "busco_sum",
+                    "uuid": "6951417b-ee0b-4e03-98e4-67d262e086dc"
                 }
             ]
         },
@@ -774,6 +764,6 @@
     "tags": [
         "genome-annotation"
     ],
-    "uuid": "bd6be8db-a617-41f3-a03c-2f029eca7427",
-    "version": 6
+    "uuid": "06db06f0-c509-4c10-91a4-6ad610b932ba",
+    "version": 10
 }

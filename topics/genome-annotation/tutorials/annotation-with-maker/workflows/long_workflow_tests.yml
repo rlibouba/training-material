@@ -1,0 +1,179 @@
+- doc: Test outline for Genome_annotation_with_maker_short.ga
+  job:
+    Genome sequence:
+      class: File
+      location: https://zenodo.org/records/13987091/files/S_pombe_chrIII_genome.fasta
+      filetype: fasta
+    Genome assembly:
+      class: File
+      location: https://zenodo.org/records/13987091/files/S_pombe_trinity_assembly.fasta
+      filetype: fasta
+    Protein sequences:
+      class: File
+      location: https://zenodo.org/records/13987091/files/Swissprot_no_S_pombe.fasta
+      filetype: fasta
+    Augustus training:
+      class: File
+      location: https://zenodo.org/records/13987091/files/augustus_training.tar.gz.augustus
+      filetype: augustus
+    SNAP training:
+      class: File
+      location: https://zenodo.org/records/13987091/files/snap_training.snaphmm
+      filetype: snaphmm
+
+  outputs:
+    Maker first annotation evidences:
+      asserts:
+        - has_n_lines:
+            n: 68913
+            delta: 20
+        - has_text:
+            text: "##gff-version 3"
+            text: "NC_003421.2"
+    Maker first annotation full:
+      asserts:
+        - has_text:
+            text: "##gff-version 3"
+            text: "NC_003421.2"
+    Maker first annotation gff:
+      asserts:
+        - has_n_lines:
+            n: 4112
+            delta: 10
+        - has_text:
+            text: "##gff-version 3"
+            text: "NC_003421.2"
+
+    'BUSCO: short summary':
+      asserts:
+        - has_text:
+            text: "BUSCO version is: 5.8.0"
+    'BUSCO: full table':
+      asserts:
+        - has_n_lines:
+            n: 758
+            delta: 10
+        - has_text:
+            text: "BUSCO version is: 5.8.0"
+            text: "494at4751"
+    
+    Fasta Statistics:
+      asserts:
+        - has_n_lines:
+            n: 30
+            delta: 2
+        - has_text:
+            text: "2452883"
+            text: "543"
+    
+    'Genome annotation statistics: summary (first round)':
+      asserts:
+        - has_n_lines:
+            n: 27
+            delta: 2
+    
+    output_exons:
+      asserts:
+        - has_text:
+            text: "ATGAATACTGGAGTTCACTTTGCGGAACTTTTGATTCCCTATCAAGTTTTCAGAGAAGCGGGTTATGAAG"
+    
+    Busco summary first round:
+      asserts:
+        - has_text:
+            text: "BUSCO version is: 5.8.0"
+    Busco table first round:
+      asserts:
+        - has_n_lines:
+            n: 760
+            delta: 10
+        - has_text:
+            text: "BUSCO version is: 5.8.0"
+            text: "494at4751"
+    
+    Maker second annotation gff:
+      asserts:
+        - has_n_lines:
+            n: 5851
+            delta: 20
+        - has_text:
+            text: "##gff-version 3"
+            text: "NC_003421.2"
+    Maker second annotation full:
+      asserts:
+        - has_text:
+            text: "##gff-version 3"
+            text: "NC_003421.2"
+    Maker second annotation evidences:
+      asserts:
+        - has_text:
+            text: "##gff-version 3"
+            text: "NC_003421.2"
+
+    'Genome annotation statistics: summary (second round)':
+      asserts:
+        - has_n_lines:
+            n: 27
+            delta: 2
+    
+    output_exons_second_annotation:
+      asserts:
+        - has_text:
+            text: "ATGATAGGAAGAGCCGACATCGAAGAATCAAAAAGCAACGTCGCTATGAACGCTTGGCTGCCACAAGCCA"
+    
+    Maker last annotation evidences:
+        - has_text:
+            text: "##gff-version 3"
+            text: "NC_003421.2"
+    Maker last annotation full:
+        - has_text:
+            text: "##gff-version 3"
+            text: "NC_003421.2"
+    Maker last annotation gff:
+        - has_text:
+            text: "##gff-version 3"
+            text: "NC_003421.2"
+    
+    Busco table second round:
+      asserts:
+        - has_text:
+            text: "BUSCO version is: 5.8.0"
+    Busco summary second round:
+      asserts:
+        - has_n_lines:
+            n: 20
+            delta: 2
+        - has_text:
+            text: "BUSCO version is: 5.8.0"
+    
+    'Genome annotation statistics: summary (third round)':
+      asserts:
+        - has_n_lines:
+            n: 27
+            delta: 2
+    
+    'Gffread: exons':
+      asserts:
+        - has_text:
+            text: "ATGATAGGAAGAGCCGACATCGAAGAATCAAAAAGCAACGTCGCTATGAACGCTTGGCTGCCACAAGCCA"
+    
+    'Map annotation ids: renamed GFF':
+      asserts:
+        - has_text:
+            text: "##gff-version 3"
+            text: "NC_003421.2"
+    
+    Busco summary final round:
+      asserts:
+        - has_n_lines:
+            n: 20
+            delta: 2
+        - has_text:
+            text: "BUSCO version is: 5.8.0"
+    Busco table final round:
+      asserts:
+        - has_n_lines:
+            n: 759
+            delta: 20
+        - has_text:
+            text: "BUSCO version is: 5.8.0"
+
